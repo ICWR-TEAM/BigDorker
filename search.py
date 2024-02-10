@@ -6,7 +6,8 @@ import re
 
 class Main:
         
-    def __init__(self, inp_searchEngine):
+    def __init__(self, inp_searchEngine=""):
+        # /////inidiedit
         self.inp_searchEngine = inp_searchEngine
         if self.inp_searchEngine == "1":
             self.page = 10
@@ -16,13 +17,17 @@ class Main:
             self.page = 10
             self.inp_query = input("Enter dorking: ")
             self.call_duckduckgo_search(self.inp_query, self.page)
+        elif self.inp_searchEngine == "3":
+            self.page = 1
+            self.inp_query = input("Enter dorking: ")
+            self.call_bing_search(self.inp_query, self.page)
         elif self.inp_searchEngine == "99":
             pass
-        else: 
+        else:
             print("Your keywoard is wrong!")
 
-    def call_duckduckgo_search(self, query, page):
-        result = self.duckduckgo_search(query, page)
+    def call_bing_search(self, query, page):
+        result = self.bing_search(query, page)
         # print(result)
         for res in result:
             print("=========================================")
@@ -40,6 +45,41 @@ class Main:
             inp_next = input("Next or stop (Enter number): ")
             print("=========================================")
             if inp_next == '1':
+                print(self.write_figlet())
+                self.page += 10
+                result = self.bing_search(query, self.page)
+                # print(result)
+                for res in result:
+                    print("Title:", res["judul"])
+                    print("Domain:", res["data"]["domain"])
+                    print("URL:", res["data"]["url"])
+                    print("Description:", res["data"]["description"])
+                    print("=========================================")
+            elif inp_next == '2':
+                print("Exiting program...")
+                break
+            else:
+                print("Invalid input. Please enter '1' or '2'.")
+
+    def call_duckduckgo_search(self, query, page):
+        result = self.duckduckgo_search(query, page)
+        for res in result:
+            print("=========================================")
+            print("Title:", res["judul"])
+            print("Domain:", res["data"]["domain"])
+            print("URL:", res["data"]["url"])
+            print("Description:", res["data"]["description"])
+        print("=========================================")
+        while True:
+            if not result:
+                print("Search not found!")
+                break
+            print("1. Next")
+            print("2. Stop")
+            inp_next = input("Next or stop (Enter number): ")
+            print("=========================================")
+            if inp_next == '1':
+                print(self.write_figlet())
                 self.page += 10
                 result = self.duckduckgo_search(query, self.page)
                 for res in result:
@@ -73,6 +113,7 @@ class Main:
             inp_next = input("Next or stop (Enter number): ")
             print("=========================================")
             if inp_next == '1':
+                print(self.write_figlet())
                 self.page += 10
                 result = self.google_search(query, self.page)
                 for res in result:
@@ -86,6 +127,32 @@ class Main:
                 break
             else:
                 print("Invalid input. Please enter '1' or '2'.")
+
+    def bing_search(self, query, page_start):
+        result_array = []
+        req_res = self.req("https://www.bing.com/search?q=" + quote_plus(str(query)) + "&first="+ str(page_start) + "&FORM=PERE", "bing").text
+        result_bs4 = BeautifulSoup(req_res, "html.parser")
+        res_title = result_bs4.find_all("h2", style_="")
+        res_decription = result_bs4.find_all("p")
+        for title, description in zip(res_title, res_decription):
+            description_replace_str_web = description.get_text().replace("Web", "")
+            title_res = title.get_text()
+            url_res = ""
+            for a in title.find_all("a"):
+                url_res += a.get("href")
+            domain_res = urlparse(url_res).netloc
+            join_dict = {
+                "judul": title_res,
+                "data": {
+                    "url": url_res,
+                    "domain": domain_res,
+                    "description": description_replace_str_web
+                }
+            }
+            if "Related searches" in title_res or "Explore further" in title_res or "Images of" in title_res:
+                continue
+            result_array.append(join_dict)
+        return result_array
 
     def duckduckgo_search(self, query="", page_start=0):
         result_array = []
@@ -156,22 +223,46 @@ class Main:
             }
         elif req_headers == "google":
             header = {"User-Agent": self.ua()}
+        elif req_headers == "bing":
+            header = {"User-Agent": self.ua()}
 
         req = requests.get(url, headers = header)
         return req
     
+    def write_figlet(self):
+        return """
+______  _         ______               _                
+| ___ \(_)        |  _  \             | |               
+| |_/ / _   __ _  | | | |  ___   _ __ | | __  ___  _ __ 
+| ___ \| | / _` | | | | | / _ \ | '__|| |/ / / _ \| '__|
+| |_/ /| || (_| | | |/ / | (_) || |   |   < |  __/| |   
+\____/ |_| \__, | |___/   \___/ |_|   |_|\_\ \___||_|   
+            __/ |                                       
+           |___/                                                    
+        """
 
 # inp_searchEngine = int(input("Seach engine: "))  
 # Main(inp_searchEngine)
     
 
-# Main().duckduckgo_search()
+# Main().bing_search()
 
 
 
 if __name__ == "__main__":
+    print("""
+______  _         ______               _                
+| ___ \(_)        |  _  \             | |               
+| |_/ / _   __ _  | | | |  ___   _ __ | | __  ___  _ __ 
+| ___ \| | / _` | | | | | / _ \ | '__|| |/ / / _ \| '__|
+| |_/ /| || (_| | | |/ / | (_) || |   |   < |  __/| |   
+\____/ |_| \__, | |___/   \___/ |_|   |_|\_\ \___||_|   
+            __/ |                                       
+           |___/                                                                                                                     
+""")
     print("1. Google")
     print("2. DuckDuckGo")
+    print("3. Bing")
     print("99. Exit program")
     try:
         inp_searchEngine = input("Search engine: ")
@@ -181,6 +272,21 @@ if __name__ == "__main__":
             Main(inp_searchEngine)
     except:
         print("Your choice is wrong!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # if inp_searchEngine == 1:
     #     Main(inp_searchEngine)
     # elif inp_searchEngine == "99":
