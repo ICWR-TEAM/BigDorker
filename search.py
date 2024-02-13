@@ -201,21 +201,21 @@ ______  _         ______               _
     print("3. Bing")
     print("4. Yahoo!")
     print("99. Exit program")
-    # try:
-    #     inp_searchEngine = input("Search engine: ")
-    #     if inp_searchEngine == "99":
-    #         print("Exiting the program...")
-    #     else:
-    #         Main(inp_searchEngine)
-    # except:
-    #     print("Your choice is wrong!")
+    try:
+        inp_searchEngine = input("Search engine: ")
+        if inp_searchEngine == "99":
+            print("Exiting the program...")
+        else:
+            Main(inp_searchEngine)
+    except:
+        print("Your choice is wrong!")
 
 
-    inp_searchEngine = input("Search engine: ")
-    if inp_searchEngine == "99":
-        print("Exiting the program...")
-    else:
-        Main(inp_searchEngine)
+    # inp_searchEngine = input("Search engine: ")
+    # if inp_searchEngine == "99":
+    #     print("Exiting the program...")
+    # else:
+    #     Main(inp_searchEngine)
 
 
 
