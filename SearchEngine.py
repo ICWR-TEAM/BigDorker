@@ -145,3 +145,27 @@ def yahoo_search(query = "", page_start = 1):
         }
         result_array.append(join_dict)
     return result_array
+
+def yandex_search(query = "", page_start = 0):
+    result_array = []
+    req_res = req(
+        "https://yandex.com/search/?text=" + quote_plus(str(query)) + "&p=" + str(page_start),
+        "yandex"
+    ).text
+    result = BeautifulSoup(req_res, "html.parser")
+    res_title = result.find_all("h2", class_="OrganicTitle-LinkText Typo Typo_text_l Typo_line_m organic__url-text")
+    res_description = result.find_all("div", class_="TextContainer OrganicText organic__text text-container Typo Typo_text_m Typo_line_m")
+    res_url = result.find_all("a", class_="OrganicTitle-Link")
+    for title, description, url in zip(res_title, res_description, res_url):
+        parse_url = urlparse(url.get("href")).netloc
+        join_dict = {
+            "judul": title.get_text(),
+            "data": {
+                "url": url.get("href"),
+                "domain": parse_url,
+                "description": description.get_text()
+            }
+        }
+        result_array.append(join_dict)
+    return result_array
+    

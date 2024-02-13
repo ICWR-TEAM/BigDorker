@@ -23,6 +23,10 @@ class Main:
             self.page = 1
             self.inp_query = input("Enter dorking: ")
             self.call_yahoo_search(self.inp_query, self.page)
+        elif self.inp_searchEngine == "5":
+            self.page = 0
+            self.inp_query = input("Enter dorking: ")
+            self.call_yandex_search(self.inp_query, self.page)
         elif self.inp_searchEngine == "99":
             pass
         else:
@@ -164,6 +168,39 @@ class Main:
             else:
                 print("Invalid input. Please enter '1' or '2'.")
 
+    def call_yandex_search(self, query, page):
+        result = s.yandex_search(query, page)
+        for res in result:
+            print("=========================================")
+            print("Title:", res["judul"])
+            print("Domain:", res["data"]["domain"])
+            print("URL:", res["data"]["url"])
+            print("Description:", res["data"]["description"])
+        print("=========================================")
+        while True:
+            if not result:
+                print("Search not found!")
+                break
+            print("1. Next")
+            print("2. Stop")
+            inp_next = input("Next or stop (Enter number): ")
+            print("=========================================")
+            if inp_next == '1':
+                print(self.write_figlet())
+                self.page += 1
+                result = s.yandex_search(query, self.page)
+                for res in result:
+                    print("Title:", res["judul"])
+                    print("Domain:", res["data"]["domain"])
+                    print("URL:", res["data"]["url"])
+                    print("Description:", res["data"]["description"])
+                    print("=========================================")        
+            elif inp_next == '2':
+                print("Exiting program...")
+                break
+            else:
+                print("Invalid input. Please enter '1' or '2'.")
+
 
     def write_figlet(self):
         return """
@@ -200,6 +237,7 @@ ______  _         ______               _
     print("2. DuckDuckGo")
     print("3. Bing")
     print("4. Yahoo!")
+    print("5. Yandex")
     print("99. Exit program")
     try:
         inp_searchEngine = input("Search engine: ")
