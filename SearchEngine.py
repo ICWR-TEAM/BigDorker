@@ -4,6 +4,31 @@ from urllib.parse import urlparse, quote_plus, unquote
 import re
 import requests
 
+
+def proc():
+    pass
+
+
+def ua():
+    return UserAgent().chrome
+
+
+def req(url, req_headers):
+    if req_headers == "duckduckgo":
+        header = {
+            "Authority": "html.duckduckgo.com",
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+        }
+    elif req_headers == "google":
+        header = {"User-Agent": ua()}
+    elif req_headers == "bing":
+        header = {"User-Agent": ua()}
+    else:
+        header = {"User-Agent": ua()}
+
+    req = requests.get(url, headers=header)
+    return req
+
 def bing_search(query, page_start):
     result_array = []
     req_res = req(
@@ -97,25 +122,26 @@ def google_search(query="", page_start=0):
         result_array.append(join_dict)
     return result_array
 
-
-def proc():
-    pass
-
-
-def ua():
-    return UserAgent().chrome
-
-
-def req(url, req_headers):
-    if req_headers == "duckduckgo":
-        header = {
-            "Authority": "html.duckduckgo.com",
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+def yahoo_search(query = "", page_start = 1):
+    result_array = []
+    req_res = req(
+        "https://search.yahoo.com/search?p=" + quote_plus(str(query)) + "&b=" + str(page_start),
+        "yahoo"
+    ).text
+    result = BeautifulSoup(req_res, "html.parser")
+    res_title = result.find_all("a", class_="d-ib fz-20 lh-26 td-hu tc va-bot mxw-100p")
+    res_description = result.find_all("p", class_="fz-14 lh-22 mah-44 ov-h d-box fbox-ov fbox-lc2")
+    res_url = res_title
+    for title, url, description in zip(res_title, res_url, res_description):
+        title_parse = title.get_text().split(" › ")[-1]
+        url_parse = unquote(urlparse(url.get("href").split("RU=")[1].split("/RK=")[0]).geturl())
+        join_dict = {
+            "judul": title_parse,
+            "data": {
+                "url": url_parse,
+                "domain": urlparse(url_parse).netloc,
+                "description": description.get_text()
+            }
         }
-    elif req_headers == "google":
-        header = {"User-Agent": ua()}
-    elif req_headers == "bing":
-        header = {"User-Agent": ua()}
-
-    req = requests.get(url, headers=header)
-    return req
+        result_array.append(join_dict)
+    return result_array
