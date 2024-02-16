@@ -213,6 +213,3 @@ def ask_search(query = "", page_start = 0):
             }
             result_array.append(join_dict)
     return result_array
-    
-    # for i in res_title:
-    #     print(i.get_text(), "\n")
