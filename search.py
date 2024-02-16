@@ -40,6 +40,8 @@ class Main:
             self.call_searx_search(self.inp_query, self.page)
         elif self.inp_searchEngine == "99":
             pass
+        elif self.inp_searchEngine == "":
+            pass
         else:
             print("Your keywoard is wrong!")
 
