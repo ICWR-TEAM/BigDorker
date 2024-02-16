@@ -170,11 +170,10 @@ def yandex_search(query = "", page_start = 0):
         result_array.append(join_dict)
     return result_array
     
-def ask_search(query = "", page_start = 1):
-    import json
+def ask_search(query = "", page_start = 0):
     result_array = []
     req_res = req(
-        "https://www.ask.com/web?q=bilhaq",
+        "https://www.ask.com/web?q=" + quote_plus(str(query)) + "&page=" + str(page_start),
         "ask"
     ).text
     result = BeautifulSoup(req_res, "html.parser")
