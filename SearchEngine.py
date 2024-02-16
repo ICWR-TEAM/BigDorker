@@ -3,6 +3,7 @@ from fake_useragent import UserAgent
 from urllib.parse import urlparse, quote_plus, unquote
 import re
 import requests
+import json
 
 
 def proc():
@@ -50,7 +51,7 @@ def bing_search(query, page_start):
             url_res += a.get("href")
         domain_res = urlparse(url_res).netloc
         join_dict = {
-            "judul": title_res,
+            "title": title_res,
             "data": {
                 "url": url_res,
                 "domain": domain_res,
@@ -86,7 +87,7 @@ def duckduckgo_search(query="", page_start=0):
         ).geturl()
         decode_url = unquote(parse_url)
         join_dict = {
-            "judul": title.a.get_text(),
+            "title": title.a.get_text(),
             "data": {
                 "url": decode_url,
                 "domain": urlparse(decode_url).netloc,
@@ -112,7 +113,7 @@ def google_search(query="", page_start=0):
     span_urls = result.find_all("span", jscontroller="msmzHf")
     for title, description, urls in zip(res_title, res_deskripsi, span_urls):
         join_dict = {
-            "judul": title.get_text(),
+            "title": title.get_text(),
             "data": {
                 "url": urls.find("a").get("href"),
                 "domain": urlparse(urls.find("a").get("href")).netloc,
@@ -136,7 +137,7 @@ def yahoo_search(query = "", page_start = 1):
         title_parse = title.get_text().split(" › ")[-1]
         url_parse = unquote(urlparse(url.get("href").split("RU=")[1].split("/RK=")[0]).geturl())
         join_dict = {
-            "judul": title_parse,
+            "title": title_parse,
             "data": {
                 "url": url_parse,
                 "domain": urlparse(url_parse).netloc,
@@ -159,7 +160,7 @@ def yandex_search(query = "", page_start = 0):
     for title, description, url in zip(res_title, res_description, res_url):
         parse_url = urlparse(url.get("href")).netloc
         join_dict = {
-            "judul": title.get_text(),
+            "title": title.get_text(),
             "data": {
                 "url": url.get("href"),
                 "domain": parse_url,
@@ -169,3 +170,50 @@ def yandex_search(query = "", page_start = 0):
         result_array.append(join_dict)
     return result_array
     
+def ask_search(query = "", page_start = 1):
+    import json
+    result_array = []
+    req_res = req(
+        "https://www.ask.com/web?q=bilhaq",
+        "ask"
+    ).text
+    result = BeautifulSoup(req_res, "html.parser")
+    result_json_ask = []
+
+    # crawling json data ask search
+    for script_tag in result.find_all("script"):
+        # Mengekstrak teks dari tag <script>
+        script_text = script_tag.string
+        if script_text:
+            # Mencari data JSON dalam teks tag <script>
+            if 'window.MESON.initialState' in script_text:
+                # Membagi teks berdasarkan tanda sama dengan (=) dan mengambil bagian kedua
+                json_data = script_text.split('window.MESON.initialState = ')[1].strip()
+                # Menghapus karakter non-JSON pada awal dan akhir string
+                json_data = json_data.split('window.MESON.loadedLang = "en";')[0].strip()
+                json_data = json_data.rstrip(";").strip()
+                # Menampilkan data JSON
+                # res_title += json.loads(json_data)
+                parsed_json = json.loads(json_data)
+                result_json_ask.append(parsed_json)
+                # res_title += json.loads(json_data)
+
+    # print(res_title["debugStrip"])
+    for i in result_json_ask:
+        for asd in i["search"]["webResults"]["results"]:
+            url = asd["url"]
+            title = asd["title"]
+            description = asd["abstract"]
+            join_dict = {
+                "title": url,
+                "data": {
+                    "url": url,
+                    "domain": urlparse(url).netloc,
+                    "description": description
+                }
+            }
+            result_array.append(join_dict)
+    return result_array
+    
+    # for i in res_title:
+    #     print(i.get_text(), "\n")

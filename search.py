@@ -37,7 +37,7 @@ class Main:
         # print(result)
         for res in result:
             print("=========================================")
-            print("Title:", res["judul"])
+            print("Title:", res["title"])
             print("Domain:", res["data"]["domain"])
             print("URL:", res["data"]["url"])
             print("Description:", res["data"]["description"])
@@ -56,7 +56,7 @@ class Main:
                 result = s.bing_search(query, self.page)
                 # print(result)
                 for res in result:
-                    print("Title:", res["judul"])
+                    print("Title:", res["title"])
                     print("Domain:", res["data"]["domain"])
                     print("URL:", res["data"]["url"])
                     print("Description:", res["data"]["description"])
@@ -71,7 +71,7 @@ class Main:
         result = s.duckduckgo_search(query, page)
         for res in result:
             print("=========================================")
-            print("Title:", res["judul"])
+            print("Title:", res["title"])
             print("Domain:", res["data"]["domain"])
             print("URL:", res["data"]["url"])
             print("Description:", res["data"]["description"])
@@ -89,7 +89,7 @@ class Main:
                 self.page += 10
                 result = s.duckduckgo_search(query, self.page)
                 for res in result:
-                    print("Title:", res["judul"])
+                    print("Title:", res["title"])
                     print("Domain:", res["data"]["domain"])
                     print("URL:", res["data"]["url"])
                     print("Description:", res["data"]["description"])
@@ -105,7 +105,7 @@ class Main:
         result = s.google_search(query, page)
         for res in result:
             print("=========================================")
-            print("Title:", res["judul"])
+            print("Title:", res["title"])
             print("Domain:", res["data"]["domain"])
             print("URL:", res["data"]["url"])
             print("Description:", res["data"]["deskripsi"])
@@ -123,7 +123,7 @@ class Main:
                 self.page += 10
                 result = s.google_search(query, self.page)
                 for res in result:
-                    print("Title:", res["judul"])
+                    print("Title:", res["title"])
                     print("Domain:", res["data"]["domain"])
                     print("URL:", res["data"]["url"])
                     print("Description:", res["data"]["deskripsi"])
@@ -139,7 +139,7 @@ class Main:
         result = s.yahoo_search(query, page)
         for res in result:
             print("=========================================")
-            print("Title:", res["judul"])
+            print("Title:", res["title"])
             print("Domain:", res["data"]["domain"])
             print("URL:", res["data"]["url"])
             print("Description:", res["data"]["description"])
@@ -157,7 +157,7 @@ class Main:
                 self.page += 7
                 result = s.yahoo_search(query, self.page)
                 for res in result:
-                    print("Title:", res["judul"])
+                    print("Title:", res["title"])
                     print("Domain:", res["data"]["domain"])
                     print("URL:", res["data"]["url"])
                     print("Description:", res["data"]["description"])
@@ -172,7 +172,7 @@ class Main:
         result = s.yandex_search(query, page)
         for res in result:
             print("=========================================")
-            print("Title:", res["judul"])
+            print("Title:", res["title"])
             print("Domain:", res["data"]["domain"])
             print("URL:", res["data"]["url"])
             print("Description:", res["data"]["description"])
@@ -190,7 +190,7 @@ class Main:
                 self.page += 1
                 result = s.yandex_search(query, self.page)
                 for res in result:
-                    print("Title:", res["judul"])
+                    print("Title:", res["title"])
                     print("Domain:", res["data"]["domain"])
                     print("URL:", res["data"]["url"])
                     print("Description:", res["data"]["description"])
