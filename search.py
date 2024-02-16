@@ -31,6 +31,14 @@ class Main:
             self.page = 1
             self.inp_query = input("Enter dorking: ")
             self.call_ask_search(self.inp_query, self.page)
+        elif self.inp_searchEngine == "7":
+            self.page = 1
+            self.inp_query = input("Enter dorking: ")
+            self.call_mojeek_search(self.inp_query, self.page)
+        elif self.inp_searchEngine == "8":
+            self.page = 1
+            self.inp_query = input("Enter dorking: ")
+            self.call_searx_search(self.inp_query, self.page)
         elif self.inp_searchEngine == "99":
             pass
         else:
@@ -238,16 +246,82 @@ class Main:
             else:
                 print("Invalid input. Please enter '1' or '2'.")
 
+    def call_mojeek_search(self, query = "", page = ""):
+        result = s.mojeek_search(query, page)
+        for res in result:
+            print("=========================================")
+            print("Title:", res["title"])
+            print("Domain:", res["data"]["domain"])
+            print("URL:", res["data"]["url"])
+            print("Description:", res["data"]["description"])
+        print("=========================================")
+        while True:
+            if not result:
+                print("Search not found!")
+                break
+            print("1. Next")
+            print("2. Stop")
+            inp_next = input("Next or stop (Enter number): ")
+            print("=========================================")
+            if inp_next == '1':
+                print(self.write_figlet())
+                self.page += 10
+                result = s.mojeek_search(query, self.page)
+                for res in result:
+                    print("Title:", res["title"])
+                    print("Domain:", res["data"]["domain"])
+                    print("URL:", res["data"]["url"])
+                    print("Description:", res["data"]["description"])
+                    print("=========================================")        
+            elif inp_next == '2':
+                print("Exiting program...")
+                break
+            else:
+                print("Invalid input. Please enter '1' or '2'.")
+
+    def call_searx_search(self, query = "", page = ""):
+        result = s.searx_seach(query, page)
+        for res in result:
+            print("=========================================")
+            print("Title:", res["title"])
+            print("Domain:", res["data"]["domain"])
+            print("URL:", res["data"]["url"])
+            print("Description:", res["data"]["description"])
+        print("=========================================")
+        while True:
+            if not result:
+                print("Search not found!")
+                break
+            print("1. Next")
+            print("2. Stop")
+            inp_next = input("Next or stop (Enter number): ")
+            print("=========================================")
+            if inp_next == '1':
+                print(self.write_figlet())
+                self.page += 10
+                result = s.searx_seach(query, self.page)
+                for res in result:
+                    print("Title:", res["title"])
+                    print("Domain:", res["data"]["domain"])
+                    print("URL:", res["data"]["url"])
+                    print("Description:", res["data"]["description"])
+                    print("=========================================")        
+            elif inp_next == '2':
+                print("Exiting program...")
+                break
+            else:
+                print("Invalid input. Please enter '1' or '2'.")
+
     def write_figlet(self):
         return """
-______  _         ______               _                
-| ___ \(_)        |  _  \             | |               
-| |_/ / _   __ _  | | | |  ___   _ __ | | __  ___  _ __ 
-| ___ \| | / _` | | | | | / _ \ | '__|| |/ / / _ \| '__|
-| |_/ /| || (_| | | |/ / | (_) || |   |   < |  __/| |   
-\____/ |_| \__, | |___/   \___/ |_|   |_|\_\ \___||_|   
-            __/ |                                       
-           |___/                                                    
+        ______  _         ______               _                
+        | ___ \(_)        |  _  \             | |               
+        | |_/ / _   __ _  | | | |  ___   _ __ | | __  ___  _ __ 
+        | ___ \| | / _` | | | | | / _ \ | '__|| |/ / / _ \| '__|
+        | |_/ /| || (_| | | |/ / | (_) || |   |   < |  __/| |   
+        \____/ |_| \__, | |___/   \___/ |_|   |_|\_\ \___||_|   
+                    __/ |                                       
+                   |___/                                                    
         """
 
 # inp_searchEngine = int(input("Seach engine: "))  
@@ -259,22 +333,15 @@ ______  _         ______               _
 
 
 if __name__ == "__main__":
-    print("""
-______  _         ______               _                
-| ___ \(_)        |  _  \             | |               
-| |_/ / _   __ _  | | | |  ___   _ __ | | __  ___  _ __ 
-| ___ \| | / _` | | | | | / _ \ | '__|| |/ / / _ \| '__|
-| |_/ /| || (_| | | |/ / | (_) || |   |   < |  __/| |   
-\____/ |_| \__, | |___/   \___/ |_|   |_|\_\ \___||_|   
-            __/ |                                       
-           |___/                                                                                                                     
-""")
+    print(Main().write_figlet())
     print("1. Google")
     print("2. DuckDuckGo")
     print("3. Bing")
     print("4. Yahoo!")
     print("5. Yandex")
     print("6. Ask")
+    print("7. Mojeek")
+    print("8. Searx")
     print("99. Exit program")
     try:
         inp_searchEngine = input("Search engine: ")

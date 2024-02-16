@@ -197,7 +197,6 @@ def ask_search(query = "", page_start = 0):
                 result_json_ask.append(parsed_json)
                 # res_title += json.loads(json_data)
 
-    # print(res_title["debugStrip"])
     for i in result_json_ask:
         for asd in i["search"]["webResults"]["results"]:
             url = asd["url"]
@@ -212,4 +211,50 @@ def ask_search(query = "", page_start = 0):
                 }
             }
             result_array.append(join_dict)
+    return result_array
+
+def mojeek_search(query = "", page_start = 0):
+    result_array = []
+    req_res = req(
+        "https://www.mojeek.com/search?q=" + quote_plus(str(query)) + "&s=" + str(page_start),
+        "mojeek"
+    ).text
+    result = BeautifulSoup(req_res, "html.parser")
+    res_title = result.find_all("a", class_="title")
+    res_url = res_title
+    res_description = result.find_all("p", class_="s")
+    for title, url, description in zip(res_title, res_url, res_description):
+        join_dict = {
+            "title": title.get_text(),
+            "data": {
+                "url": url.get("href"),
+                "domain": urlparse(url.get("href")).netloc,
+                "description": description.get_text()
+            }
+        }
+        result_array.append(join_dict)
+    return result_array
+
+def searx_seach(query = "", page_start = ""):
+    result_array = []
+    req_res = req(
+        "https://searx.thegpm.org/?q=" + quote_plus(str(query)),
+        "searx"
+    ).text
+    result = BeautifulSoup(req_res, "html.parser")
+    res_title = result.find_all("h4", class_="result_header")
+    res_description = result.find_all("p", class_="result-content")
+
+    for title, description in zip(res_title, res_description):
+        res_url = title.a.get('href')
+        domain = urlparse(res_url).netloc
+        join_dict = {
+            "title": title.get_text(),
+            "data": {
+                "url": res_url,
+                "domain": domain,
+                "description": description.get_text()
+            }
+        }
+        result_array.append(join_dict)
     return result_array
