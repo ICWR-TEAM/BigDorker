@@ -5,7 +5,6 @@ s = SearchEngine
 class Main:
     global s
     def __init__(self, inp_searchEngine=""):
-        # /////inidiedit
         self.inp_searchEngine = inp_searchEngine
         if self.inp_searchEngine == "1":
             self.page = 10
@@ -46,7 +45,6 @@ class Main:
 
     def call_bing_search(self, query, page):
         result = s.bing_search(query, page)
-        # print(result)
         for res in result:
             print("=========================================")
             print("Title:", res["title"])
@@ -66,7 +64,6 @@ class Main:
                 print(self.write_figlet())
                 self.page += 10
                 result = s.bing_search(query, self.page)
-                # print(result)
                 for res in result:
                     print("Title:", res["title"])
                     print("Domain:", res["data"]["domain"])
@@ -324,14 +321,6 @@ class Main:
                    |___/                                                    
         """
 
-# inp_searchEngine = int(input("Seach engine: "))  
-# Main(inp_searchEngine)
-    
-
-# Main().bing_search()
-
-
-
 if __name__ == "__main__":
     print(Main().write_figlet())
     print("1. Google")
@@ -351,31 +340,3 @@ if __name__ == "__main__":
             Main(inp_searchEngine)
     except:
         print("Your choice is wrong!")
-
-
-    # inp_searchEngine = input("Search engine: ")
-    # if inp_searchEngine == "99":
-    #     print("Exiting the program...")
-    # else:
-    #     Main(inp_searchEngine)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # if inp_searchEngine == 1:
-    #     Main(inp_searchEngine)
-    # elif inp_searchEngine == "99":
-    #     print("Exiting the program...")
-    # else:
-    #     print("Invalid input. Please enter either 1 or 99.")
