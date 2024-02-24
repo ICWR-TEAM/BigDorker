@@ -584,8 +584,8 @@ class Main_auto:
 
 
     def call_google_search(self, query, page, delay):
-        name_file = self.date_file()
-        file = open("output/google_" + name_file + ".txt", "w")
+        name_file = "google_" + self.date_file()
+        file = open("output/" + name_file + ".txt", "w")
         for list_query in self.list_querys():
             query_search = query + " " + list_query
             result = s.google_search(query_search, page)
@@ -633,8 +633,8 @@ class Main_auto:
 
 
     def call_bing_search(self, query, page, delay):
-        name_file = self.date_file()
-        file = open("output/bing_" + name_file + ".txt", "w")
+        name_file = "bing_" + self.date_file()
+        file = open("output/" + name_file + ".txt", "w")
         for list_query in self.list_querys():
             query_search = query + " " + list_query
             result = s.bing_search(query_search, page)
@@ -681,8 +681,8 @@ class Main_auto:
         file.close()
 
     def call_duckduckgo_search(self, query, page, delay):
-        name_file = self.date_file()
-        file = open("output/duckduckgo_" + name_file + ".txt", "w")
+        name_file = "duckduckgo_" + self.date_file()
+        file = open("output/" + name_file + ".txt", "w")
         for list_query in self.list_querys():
             query_search = query + " " + list_query
             result = s.duckduckgo_search(query_search, page)
@@ -730,8 +730,8 @@ class Main_auto:
 
 
     def call_yahoo_search(self, query, page, delay):
-        name_file = self.date_file()
-        file = open("output/yahoo_" + name_file + ".txt", "w")
+        name_file = "yahoo_" + self.date_file()
+        file = open("output/" + name_file + ".txt", "w")
         for list_query in self.list_querys():
             query_search = query + " " + list_query
             result = s.yahoo_search(query_search, page)
@@ -778,8 +778,8 @@ class Main_auto:
         file.close()
 
     def call_yandex_search(self, query, page, delay):
-        name_file = self.date_file()
-        file = open("output/yandex_" + name_file + ".txt", "w")
+        name_file = "yandex_" + self.date_file()
+        file = open("output/" + name_file + ".txt", "w")
         for list_query in self.list_querys():
             query_search = query + " " + list_query
             result = s.yandex_search(query_search, page)
@@ -826,8 +826,8 @@ class Main_auto:
         file.close()
 
     def call_ask_search(self, query = "", page = "", delay = ""):
-        name_file = self.date_file()
-        file = open("output/ask_" + name_file + ".txt", "w")
+        name_file = "ask_" + self.date_file()
+        file = open("output/" + name_file + ".txt", "w")
         for list_query in self.list_querys():
             query_search = query + " " + list_query
             result = s.ask_search(query_search, page)
@@ -874,8 +874,8 @@ class Main_auto:
         file.close()
 
     def call_mojeek_search(self, query = "", page = "", delay = ""):
-        name_file = self.date_file()
-        file = open("output/mojeek_" + name_file + ".txt", "w")
+        name_file = "mojeek_" + self.date_file()
+        file = open("output/" + name_file + ".txt", "w")
         for list_query in self.list_querys():
             query_search = query + " " + list_query
             result = s.mojeek_search(query_search, page)
@@ -922,8 +922,8 @@ class Main_auto:
         file.close()
 
     def call_searx_search(self, query = "", page = "", delay = ""):
-        name_file = self.date_file()
-        file = open("output/searx_" + name_file + ".txt", "w")
+        name_file = "searx" + self.date_file()
+        file = open("output/" + name_file + ".txt", "w")
         for list_query in self.list_querys():
             query_search = query + " " + list_query
             result = s.searx_search(query_search, page)
