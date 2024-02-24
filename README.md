@@ -37,6 +37,11 @@ options:
 
 ```
 
+
+## Suggestion!!!
+
+When performing auto dorking, it's advisable to use a delay of 4 to avoid potential access blocking.
+
 ## Another picture
 ![Screenshot from 2024-02-24 19-41-23](https://github.com/ICWR-TEAM/BigDorker/assets/45759837/78c11fa8-7b12-41bb-90fe-1735eeb38190)
 ![Screenshot from 2024-02-24 19-41-48](https://github.com/ICWR-TEAM/BigDorker/assets/45759837/d6356b7a-b43e-4bd5-ac82-6c43f3cc0465)
