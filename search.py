@@ -43,7 +43,7 @@ class Main_manual:
         elif self.inp_searchEngine == "99":
             pass
         elif self.inp_searchEngine == "":
-            print("Your keywoard is missing!")
+            pass
         else:
             print("Your keywoard is wrong!")
 
@@ -578,7 +578,7 @@ class Main_auto:
         elif self.inp_searchEngine == "99":
             pass
         elif self.inp_searchEngine == "":
-            print("Your keywoard is missing!")
+            pass
         else:
             print("Your keywoard is wrong!")
 
