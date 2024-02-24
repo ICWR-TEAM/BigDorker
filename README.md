@@ -1,5 +1,5 @@
 # Big Dorker
-![Screenshot from 2024-02-16 18-37-16](https://github.com/ICWR-TEAM/BigDorker/assets/45759837/d8673742-2a4e-4852-9905-2c8acda097d3)
+![Screenshot from 2024-02-24 19-46-36](https://github.com/ICWR-TEAM/BigDorker/assets/45759837/ea190d4d-8cc8-4013-bc42-905d029f2a3c)
 
 Big Dorker is a console-based tool used for dorking on multiple popular search engines such as Google, DuckDuckGo, Bing, Yahoo, Yandex, Ask, Mojeek, and Searx. Dorking is a search technique used by security researchers and information security professionals to find sensitive information that is inadvertently exposed in publicly available databases and documents online.
 
@@ -36,6 +36,10 @@ options:
                         Give your choice ('manual' or 'auto')
 
 ```
+
+## Another picture
+![Screenshot from 2024-02-24 19-41-23](https://github.com/ICWR-TEAM/BigDorker/assets/45759837/78c11fa8-7b12-41bb-90fe-1735eeb38190)
+![Screenshot from 2024-02-24 19-41-48](https://github.com/ICWR-TEAM/BigDorker/assets/45759837/d6356b7a-b43e-4bd5-ac82-6c43f3cc0465)
 
 ## Miscellaneous
 
