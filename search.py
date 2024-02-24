@@ -43,7 +43,7 @@ class Main_manual:
         elif self.inp_searchEngine == "99":
             pass
         elif self.inp_searchEngine == "":
-            pass
+            print("Your keywoard is missing!")
         else:
             print("Your keywoard is wrong!")
 
@@ -536,7 +536,7 @@ class Main_manual:
                    |___/                                                    
         """
 
-# ////////////////////////////////////////cek tolong ulang!!!
+
 
 class Main_auto:
     global s
@@ -578,7 +578,7 @@ class Main_auto:
         elif self.inp_searchEngine == "99":
             pass
         elif self.inp_searchEngine == "":
-            pass
+            print("Your keywoard is missing!")
         else:
             print("Your keywoard is wrong!")
 
@@ -1048,16 +1048,15 @@ class Main_auto:
     
     def loading_animation(self, frames=20, chars="/—\|", delay=0.1):
         for i in range(frames):
-            sys.stdout.write(chars[i % len(chars)])  # Menuliskan karakter animasi ke konsol
+            sys.stdout.write(chars[i % len(chars)])
             sys.stdout.flush()
-            time.sleep(delay)  # Jeda antara setiap frame
-            sys.stdout.write("\b")  # Kembali satu karakter untuk menimpa karakter animasi sebelumnya
+            time.sleep(delay)  
+            sys.stdout.write("\b")  
 
     def date_file(self):
         now = datetime.now()
         formatted_time = now.strftime("%d_%m_%Y-%H_%M_%S")
         return formatted_time
-
 
 
 
@@ -1076,22 +1075,14 @@ if __name__ == "__main__":
         print("7. Mojeek")
         print("8. Searx")
         print("99. Exit program")
-        # try:
-        #     inp_searchEngine = input("Search engine: ")
-        #     if inp_searchEngine == "99":
-        #         print("Exiting the program...")
-        #     else:
-        #         Main_manual(inp_searchEngine)
-        # except:
-        #     print("Your choice is wrong!")
-
-
-        inp_searchEngine = input("Search engine: ")
-        if inp_searchEngine == "99":
-            print("Exiting the program...")
-        else:
-            Main_manual(inp_searchEngine)
-
+        try:
+            inp_searchEngine = input("Search engine: ")
+            if inp_searchEngine == "99":
+                print("Exiting the program...")
+            else:
+                Main_manual(inp_searchEngine)
+        except:
+            print("Your choice is wrong!")
     elif args.option == "auto":
         print(Main_auto().write_figlet())
         print("1. Google")
@@ -1112,41 +1103,3 @@ if __name__ == "__main__":
                 Main_auto(inp_searchEngine, inp_time)
         except:
             print("Your input is wrong(please check documentation)!")
-
-        
-        # inp_searchEngine = input("Search engine: ")
-        # inp_time =  input("Delay/second(default 4/s): ")
-        # if inp_searchEngine == "99":
-        #     print("Exiting the program...")
-        # else:
-        #     Main_auto(inp_searchEngine, inp_time)
-
-
-
-
-    # google search
-                # self.key_query += 1
-
-        # while True:
-        #     if not result:
-        #         print("Search not found!")
-        #         break
-        #     print("1. Next")
-        #     print("2. Stop")
-        #     inp_next = input("Next or stop (Enter number): ")
-        #     print("=========================================")
-        #     if inp_next == '1':
-        #         print(self.write_figlet())
-        #         self.page += 10
-        #         result = s.google_search(query, self.page)
-        #         for res in result:
-        #             print("Title:", res["title"])
-        #             print("Domain:", res["data"]["domain"])
-        #             print("URL:", res["data"]["url"])
-        #             print("Description:", res["data"]["deskripsi"])
-        #             print("=========================================")        
-        #     elif inp_next == '2':
-        #         print("Exiting program...")
-        #         break
-        #     else:
-        #         print("Invalid input. Please enter '1' or '2'.")

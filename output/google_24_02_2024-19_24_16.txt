@@ -1,0 +1,60 @@
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: Nuxt Configuration
+Domain: v3.nuxtjs.org
+URL: https://v3.nuxtjs.org/api/configuration/nuxt.config
+Description: Each item in transpile can be a package name, a function, a string or regex object matching the dependency's file name. You can also use a function to ...
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: How to convert a simple INI file contents into JSON?
+Domain: www.sololearn.com
+URL: https://www.sololearn.com/en/Discuss/2870565/config.ini
+Description: For a future project, I am planning to make some IDE-like program dealing with INI files. Probably Python or JavaScript.
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: Boston Red Sox 2024 MLB Roster
+Domain: www.espn.com.sg
+URL: https://www.espn.com.sg/mlb/team/roster/_/name/bos/sort/position/web.config
+Description: Explore the 2024 Boston Red Sox MLB roster on - ESPN (SG). Includes full details on pitchers, infielders and outfielders.
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: /etc/portage/package.env - Gentoo wiki
+Domain: wiki.gentoo.org
+URL: https://wiki.gentoo.org/wiki//etc/portage/package.env
+Description: 1 Jan 2024 — These files can hook into specific phases of the emerge process. If all that is needed is to set environment variables, use a free-form file ...
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: project.config - TF-A - Gitiles - Gerrit Code Review
+Domain: review.trustedfirmware.org
+URL: https://review.trustedfirmware.org/plugins/gitiles/TF-A/+/21ae8d57d006c4a3cfddaeedfde51c9acd4babdb/project.config
+Description: # It sets the Verified score. [label "Allow-CI"].
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: Associate a Public Host Monitoring Template
+Domain: pingancloud.com
+URL: https://pingancloud.com/ssr/help/manage/argus/cfg.public.config
+Description: After creating an alarm template, you need to associate it to the public host to be monitored. At present, there are two operation methods of associating an ...
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: Diagram.Svg.Config - elm-wiring-diagrams 5.4.7
+Domain: package.elm-lang.org
+URL: https://package.elm-lang.org/packages/jcberentsen/elm-wiring-diagrams/latest/Diagram.Svg.Config
+Description: Diagram.Svg.Config. Configure how to convert Layout Labels to Strings for Svg output. type alias Config a msg =.
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: com.fulcrologic.fulcro.server.config
+Domain: cljdoc.org
+URL: https://cljdoc.org/d/com.fulcrologic/fulcro/3.0.0/api/com.fulcrologic.fulcro.server.config
+Description: Utilities for managing server configuration via EDN files. These functions expect a config/defaults.edn to exist on the classpath as a definition for server ...
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: Gem #141 : Con-figure it out
+Domain: www.adacore.com
+URL: https://www.adacore.com/gems/gem-141-gnatcoll.config
+Description: Configuration files are user- or machine-editable files. This is a general term, though, which does not imply any specific format. Several formats are ...
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: tap-as-a-service-tempest-plugin/taas.ini at ...
+Domain: opendev.org
+URL: https://opendev.org/x/tap-as-a-service-tempest-plugin/src/commit/3e7fb755bde9690b50d28b431d7cc95ef48494df/etc/taas.ini
+Description: [taas]. driver = neutron_taas.services.taas.drivers.linux.ovs_taas.OvsTaasDriver. enabled = True. vlan_range_start = 3000. vlan_range_end = 3500 ...
