@@ -3,6 +3,10 @@
 
 Big Dorker is a console-based tool used for dorking on multiple popular search engines such as Google, DuckDuckGo, Bing, Yahoo, Yandex, Ask, Mojeek, and Searx. Dorking is a search technique used by security researchers and information security professionals to find sensitive information that is inadvertently exposed in publicly available databases and documents online.
 
+## What new??
+- Addition of output file for dorking results.
+- addition of automated dorking feature.
+
 ## Key Features
 
 - Automatic Dorking: Perform automatic dorking on various search engines using predefined queries and dorks.
@@ -17,12 +21,20 @@ Big Dorker is a console-based tool used for dorking on multiple popular search e
 2. Download or clone this repository into a local directory.
 3. Open a terminal or command prompt and navigate to the directory where you saved the source code.
 4. Run `pip install -r requirements.txt` to install the required dependencies.
-5. Run Big Dorker by executing the command `python search.py`.
+5. Run Big Dorker by executing the command `python search.py --o 'manual'/'auto'`.
 
 ## Usage
 
 ```bash
-python search.py
+billy@icwr:~/projects$ python3 search.py -h
+
+usage: search.py [-h] -o OPTION
+
+options:
+  -h, --help            show this help message and exit
+  -o OPTION, --option OPTION
+                        Give your choice ('manual' or 'auto')
+
 ```
 
 ## Miscellaneous
