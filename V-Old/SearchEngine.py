@@ -117,7 +117,7 @@ def google_search(query="", page_start=0):
             "data": {
                 "url": urls.find("a").get("href"),
                 "domain": urlparse(urls.find("a").get("href")).netloc,
-                "description": description.get_text(),
+                "deskripsi": description.get_text(),
             },
         }
         result_array.append(join_dict)
@@ -235,7 +235,7 @@ def mojeek_search(query = "", page_start = 0):
         result_array.append(join_dict)
     return result_array
 
-def searx_search(query = "", page_start = ""):
+def searx_seach(query = "", page_start = ""):
     result_array = []
     req_res = req(
         "https://searx.thegpm.org/?q=" + quote_plus(str(query)),
