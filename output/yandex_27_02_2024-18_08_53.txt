@@ -1,0 +1,18 @@
+=========================================
+Query search: a
+Title: dzen.ru/a/X9sMANdx5SsDPZQq | Дзен
+Domain: dzen.ru
+URL: https://dzen.ru/a/X9sMANdx5SsDPZQq
+Description: Неопределенный артикль A (или AN) употребляется: 1 с исчисляемыми существительными в единственном числе, которые упоминаются в разговоре...
+=========================================
+Query search: a
+Title: english4life.ru/pravila-chteniya-anglijskoj-bukvy-a.html
+Domain: english4life.ru
+URL: https://english4life.ru/pravila-chteniya-anglijskoj-bukvy-a.html
+Description: Tip: A linked page is normally displayed in the current browser window, unless you specify another target. Tip: Use CSS to style links: CSS Links and CSS Buttons.
+=========================================
+Query search: a
+Title: HTML <a> Tag. Lessons for beginners. W3Schools in English
+Domain: w3schoolsua.github.io
+URL: https://w3schoolsua.github.io/tags/tag_a_en.html
+Description: one (used before plural nouns that are preceded by a quantifier singular in form): a hundred men (compare hundreds of men ); a dozen times (compare dozens of times ).

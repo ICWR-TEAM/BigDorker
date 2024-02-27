@@ -1,0 +1,84 @@
+=========================================
+Query search: a
+Title: àà - Wiktionary, the free dictionary
+Domain: en.wiktionary.org
+URL: https://en.wiktionary.org/wiki/%C3%A0
+Description: Feb 10, 2024 ·  un à un ― one by one. or, to (used to express an approximate number) six à sept personnes ― six or seven people. de vingt à trente ans ― from twenty to thirty years. tous les cinq à six ans ― every five or six years. Used to indicate the recipient of certain phrasal verb. mettre le feu à ― to set fire to. 
+=========================================
+Query search: a
+Title: ÃÃ - Wikipedia
+Domain: en.wikipedia.org
+URL: https://en.wikipedia.org/wiki/%C3%83
+Description: For the distinction between [ ], / / and , see IPA § Brackets and transcription delimiters. A with tilde ( majuscule: Ã, minuscule: ã) is a letter of the Latin alphabet formed by addition of the tilde diacritic over the letter A. It is used in Portuguese, Guaraní, Kashubian, [2] Taa, Aromanian, and Vietnamese. 
+=========================================
+Query search: a
+Title: ÀÀ - Wikipedia
+Domain: en.wikipedia.org
+URL: https://en.wikipedia.org/wiki/%C3%80
+Description: À, à ( a - grave) is a letter of the Catalan, Emilian-Romagnol, French, Italian, Maltese, Occitan, Portuguese, Sardinian, Scottish Gaelic, [1] Vietnamese, and Welsh languages consisting of the letter A of the ISO basic Latin alphabet and a grave accent. À is also used in Pinyin transliteration. In most languages, it represents the vowel a. 
+=========================================
+Query search: a
+Title: ÁÁ - Wikipedia
+Domain: en.wikipedia.org
+URL: https://en.wikipedia.org/wiki/%C3%81
+Description: Usage in various languages Chinese. In Chinese pinyin á is the yángpíng tone (陽平/阳平 "high-rising tone") of "a".. Dutch. In Dutch, the Á is used to put emphasis on an "a", either in a long "a" form like in háár ("hair"), or in a short form like in kán (the verb "can"). 
+=========================================
+Query search: a
+Title: docs: The Anchor element - HTML: HyperText Markup Language | MDN
+Domain: developer.mozilla.org
+URL: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+Description: 5 days ago ·  The <a> HTML element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address. Content within each <a> should indicate the link's destination. If the href attribute is present, pressing the enter key while focused on the <a> element ... 
+=========================================
+Query search: a
+Title: tag_aHTML a tag - W3Schools
+Domain: www.w3schools.com
+URL: https://www.w3schools.com/tags/tag_a.asp
+Description: The <a> tag defines a hyperlink, which is used to link from one page to another. The most important attribute of the <a> element is the href attribute, which indicates the link's destination. By default, links will appear as follows in all browsers: An unvisited link is underlined and blue. A visited link is underlined and purple. 
+=========================================
+Query search: a
+Title: angstromAngstrom (Å) | Definition, Uses, & Facts | Britannica
+Domain: www.britannica.com
+URL: https://www.britannica.com/science/angstrom
+Description: Angstrom (Å), unit of length, equal to 10−10 metre, or 0.1 nanometre. It is used chiefly in measuring wavelengths of light. (Visible light stretches from 4000 to 7000 Å.) It is named for the 19th-century Swedish physicist Anders Jonas Ångström. The angstrom is also used to measure such quantities 
+=========================================
+Query search: a
+Title: àà - Wiktionary, the free dictionary
+Domain: en.wiktionary.org
+URL: https://en.wiktionary.org/wiki/%C3%A0
+Description: Feb 10, 2024 ·  un à un ― one by one. or, to (used to express an approximate number) six à sept personnes ― six or seven people. de vingt à trente ans ― from twenty to thirty years. tous les cinq à six ans ― every five or six years. Used to indicate the recipient of certain phrasal verb. mettre le feu à ― to set fire to. 
+=========================================
+Query search: a
+Title: ÃÃ - Wikipedia
+Domain: en.wikipedia.org
+URL: https://en.wikipedia.org/wiki/%C3%83
+Description: For the distinction between [ ], / / and , see IPA § Brackets and transcription delimiters. A with tilde ( majuscule: Ã, minuscule: ã) is a letter of the Latin alphabet formed by addition of the tilde diacritic over the letter A. It is used in Portuguese, Guaraní, Kashubian, [2] Taa, Aromanian, and Vietnamese. 
+=========================================
+Query search: a
+Title: ÀÀ - Wikipedia
+Domain: en.wikipedia.org
+URL: https://en.wikipedia.org/wiki/%C3%80
+Description: À, à ( a - grave) is a letter of the Catalan, Emilian-Romagnol, French, Italian, Maltese, Occitan, Portuguese, Sardinian, Scottish Gaelic, [1] Vietnamese, and Welsh languages consisting of the letter A of the ISO basic Latin alphabet and a grave accent. À is also used in Pinyin transliteration. In most languages, it represents the vowel a. 
+=========================================
+Query search: a
+Title: ÁÁ - Wikipedia
+Domain: en.wikipedia.org
+URL: https://en.wikipedia.org/wiki/%C3%81
+Description: Usage in various languages Chinese. In Chinese pinyin á is the yángpíng tone (陽平/阳平 "high-rising tone") of "a".. Dutch. In Dutch, the Á is used to put emphasis on an "a", either in a long "a" form like in háár ("hair"), or in a short form like in kán (the verb "can"). 
+=========================================
+Query search: a
+Title: docs: The Anchor element - HTML: HyperText Markup Language | MDN
+Domain: developer.mozilla.org
+URL: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+Description: 5 days ago ·  The <a> HTML element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address. Content within each <a> should indicate the link's destination. If the href attribute is present, pressing the enter key while focused on the <a> element ... 
+=========================================
+Query search: a
+Title: tag_aHTML a tag - W3Schools
+Domain: www.w3schools.com
+URL: https://www.w3schools.com/tags/tag_a.asp
+Description: The <a> tag defines a hyperlink, which is used to link from one page to another. The most important attribute of the <a> element is the href attribute, which indicates the link's destination. By default, links will appear as follows in all browsers: An unvisited link is underlined and blue. A visited link is underlined and purple. 
+=========================================
+Query search: a
+Title: angstromAngstrom (Å) | Definition, Uses, & Facts | Britannica
+Domain: www.britannica.com
+URL: https://www.britannica.com/science/angstrom
+Description: Angstrom (Å), unit of length, equal to 10−10 metre, or 0.1 nanometre. It is used chiefly in measuring wavelengths of light. (Visible light stretches from 4000 to 7000 Å.) It is named for the 19th-century Swedish physicist Anders Jonas Ångström. The angstrom is also used to measure such quantities 

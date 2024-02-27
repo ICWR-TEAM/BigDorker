@@ -1,0 +1,120 @@
+=========================================
+Query search: a
+Title: Create a Blog on WordPress.com
+Domain: wordpress.com
+URL: https://wordpress.com/create-blog/
+Description: Wherever you are at the time. ... Skim your blog stats with an at-a-glance dashboard. ... There are a lot of ways to earn money with your blog.
+=========================================
+Query search: a
+Title: Plan a journey - Transport for London
+Domain: tfl.gov.uk
+URL: https://tfl.gov.uk/plan-a-journey/
+Description: Journeys Plan a journey and favourite it for quick access in the future ... Existing place Add a Label ... Add a label
+=========================================
+Query search: a
+Title: Find a job - GOV.UK
+Domain: www.gov.uk
+URL: https://www.gov.uk/find-a-job
+Description: You can change your cookie settings at any time. ... Find an apprenticeship ... National Careers Service: careers advice and guidance
+=========================================
+Query search: a
+Title: A-HOTEL.com - Cheap hotels and more accommodation worldwide.
+Domain: www.a-hotel.com
+URL: https://www.a-hotel.com/
+Description: ARS Argentine peso ... There is also a map with the exact location of your favourite hotel in the final destination.
+=========================================
+Query search: a
+Title: A List Apart – For people who make websites
+Domain: alistapart.com
+URL: https://alistapart.com/
+Description: by Jeffrey Zeldman · 15 Comments on I am a creative. ... clear guidance on how to track and address the carbon footprint of our websites.
+=========================================
+Query search: a
+Title: Find a Grave - Millions of Cemetery Records
+Domain: www.findagrave.com
+URL: https://www.findagrave.com/
+Description: Please complete the captcha to let us know you are a real person. ... You can unsubscribe or customize your email settings at any time.
+=========================================
+Query search: a
+Title: Health A to Z - NHS
+Domain: www.nhs.uk
+URL: https://www.nhs.uk/conditions/
+Description: Gastro-oesophageal reflux disease (GORD), see Heartburn and acid reflux  ... Oesophageal atresia and tracheo-oesophageal fistula 
+=========================================
+Query search: a
+Title: How to Start a WordPress Blog in 2024 (Beginner's Guide)
+Domain: www.wpbeginner.com
+URL: https://www.wpbeginner.com/start-a-wordpress-blog/
+Description: However, there is no such thing as a get-rich-quick scheme. ... We recommend using PrettyLinks or ThirstyAffiliates as a must-have.
+=========================================
+Query search: a
+Title: Create forums - Forumotion.com - Create your free forum
+Domain: www.forumotion.com
+URL: https://www.forumotion.com/create-forum/phpbb3
+Description: Do not worry, nothing is final, you can change the graphical theme of your forum at any time very easily. ... Change your forum version at any moment!
+=========================================
+Query search: a
+Title: Find a Lawyer | Lawyers Near Me | FindLaw.com
+Domain: lawyers.findlaw.com
+URL: https://lawyers.findlaw.com/
+Description: ... and location, and we'll do the rest. ... Quickly find the lawyer you need with our directory of attorneys and law firms throughout the United States.
+=========================================
+Query search: a
+Title: Create a Blog on WordPress.com
+Domain: wordpress.com
+URL: https://wordpress.com/create-blog/
+Description: Wherever you are at the time. ... Skim your blog stats with an at-a-glance dashboard. ... There are a lot of ways to earn money with your blog.
+=========================================
+Query search: a
+Title: Plan a journey - Transport for London
+Domain: tfl.gov.uk
+URL: https://tfl.gov.uk/plan-a-journey/
+Description: Journeys Plan a journey and favourite it for quick access in the future ... Existing place Add a Label ... Add a label
+=========================================
+Query search: a
+Title: Find a job - GOV.UK
+Domain: www.gov.uk
+URL: https://www.gov.uk/find-a-job
+Description: You can change your cookie settings at any time. ... Find an apprenticeship ... National Careers Service: careers advice and guidance
+=========================================
+Query search: a
+Title: A-HOTEL.com - Cheap hotels and more accommodation worldwide.
+Domain: www.a-hotel.com
+URL: https://www.a-hotel.com/
+Description: ARS Argentine peso ... There is also a map with the exact location of your favourite hotel in the final destination.
+=========================================
+Query search: a
+Title: A List Apart – For people who make websites
+Domain: alistapart.com
+URL: https://alistapart.com/
+Description: by Jeffrey Zeldman · 15 Comments on I am a creative. ... clear guidance on how to track and address the carbon footprint of our websites.
+=========================================
+Query search: a
+Title: Find a Grave - Millions of Cemetery Records
+Domain: www.findagrave.com
+URL: https://www.findagrave.com/
+Description: Please complete the captcha to let us know you are a real person. ... You can unsubscribe or customize your email settings at any time.
+=========================================
+Query search: a
+Title: Health A to Z - NHS
+Domain: www.nhs.uk
+URL: https://www.nhs.uk/conditions/
+Description: Gastro-oesophageal reflux disease (GORD), see Heartburn and acid reflux  ... Oesophageal atresia and tracheo-oesophageal fistula 
+=========================================
+Query search: a
+Title: How to Start a WordPress Blog in 2024 (Beginner's Guide)
+Domain: www.wpbeginner.com
+URL: https://www.wpbeginner.com/start-a-wordpress-blog/
+Description: However, there is no such thing as a get-rich-quick scheme. ... We recommend using PrettyLinks or ThirstyAffiliates as a must-have.
+=========================================
+Query search: a
+Title: Create forums - Forumotion.com - Create your free forum
+Domain: www.forumotion.com
+URL: https://www.forumotion.com/create-forum/phpbb3
+Description: Do not worry, nothing is final, you can change the graphical theme of your forum at any time very easily. ... Change your forum version at any moment!
+=========================================
+Query search: a
+Title: Find a Lawyer | Lawyers Near Me | FindLaw.com
+Domain: lawyers.findlaw.com
+URL: https://lawyers.findlaw.com/
+Description: ... and location, and we'll do the rest. ... Quickly find the lawyer you need with our directory of attorneys and law firms throughout the United States.

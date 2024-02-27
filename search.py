@@ -113,35 +113,43 @@ class Main_manual(System):
         if self.inp_searchEngine == "1":
             self.page = 10
             self.inp_query = input("Enter dorking: ")
-            self.call_google_search(self.inp_query, self.page)
+            engine = "google"
+            self.call_search(engine, self.inp_query, self.page)
         elif self.inp_searchEngine == "2":
             self.page = 10
             self.inp_query = input("Enter dorking: ")
-            self.call_duckduckgo_search(self.inp_query, self.page)
+            engine = "duckduckgo"
+            self.call_search(engine, self.inp_query, self.page)
         elif self.inp_searchEngine == "3":
-            self.page = 1
+            self.page = 10
             self.inp_query = input("Enter dorking: ")
-            self.call_bing_search(self.inp_query, self.page)
+            engine = "bing"
+            self.call_search(engine, self.inp_query, self.page)
         elif self.inp_searchEngine == "4":
+            self.page = 10
+            self.inp_query = input("Enter dorking: ")
+            engine = "yahoo"
+            self.call_search(engine, self.inp_query, self.page)
+        elif self.inp_searchEngine == "5":
             self.page = 1
             self.inp_query = input("Enter dorking: ")
-            self.call_yahoo_search(self.inp_query, self.page)
-        elif self.inp_searchEngine == "5":
-            self.page = 0
-            self.inp_query = input("Enter dorking: ")
-            self.call_yandex_search(self.inp_query, self.page)
+            engine = "yandex"
+            self.call_search(engine, self.inp_query, self.page)
         elif self.inp_searchEngine == "6":
             self.page = 1
             self.inp_query = input("Enter dorking: ")
-            self.call_ask_search(self.inp_query, self.page)
+            engine = "ask"
+            self.call_search(engine, self.inp_query, self.page)
         elif self.inp_searchEngine == "7":
-            self.page = 1
+            self.page = 11
             self.inp_query = input("Enter dorking: ")
-            self.call_mojeek_search(self.inp_query, self.page)
+            engine = "mojeek"
+            self.call_search(engine, self.inp_query, self.page)
         elif self.inp_searchEngine == "8":
-            self.page = 1
+            self.page = 10
             self.inp_query = input("Enter dorking: ")
-            self.call_searx_search(self.inp_query, self.page)
+            engine = "searx"
+            self.call_search(engine, self.inp_query, self.page)
         elif self.inp_searchEngine == "99":
             pass
         elif self.inp_searchEngine == "":
@@ -149,67 +157,25 @@ class Main_manual(System):
         else:
             print("Your keywoard is wrong!")
 
-    def call_bing_search(self, query, page):
-        engine = "bing"
+    def call_search(self, engine, query, page):
         name_file = engine + "_" + self.date_file()
         file = open("output/" + name_file + ".txt", "w")
-        result = s.bing_search(query, page)
-        self.proc_manual(engine, query, page, result, name_file, file) #process
-        file.close()
-
-    def call_duckduckgo_search(self, query, page):
-        engine = "duckduckgo"
-        name_file = engine + "_" + self.date_file()
-        file = open("output/" + name_file + ".txt", "w")
-        result = s.duckduckgo_search(query, page)
-        self.proc_manual(engine, query, page, result, name_file, file) #process
-        file.close()
-
-    def call_google_search(self, query, page):
-        engine = "google"
-        name_file = engine + "_" + self.date_file()
-        file = open("output/" + name_file + ".txt", "w")
-        result = s.google_search(query, page)
-        self.proc_manual(engine, query, page, result, name_file, file) #process
-        file.close()
-
-    def call_yahoo_search(self, query, page):
-        engine = "yahoo"
-        name_file = engine + "_" + self.date_file()
-        file = open("output/" + name_file + ".txt", "w")
-        result = s.yahoo_search(query, page)
-        self.proc_manual(engine, query, page, result, name_file, file) #process
-        file.close()
-
-    def call_yandex_search(self, query, page):
-        engine = "yandex"
-        name_file = engine + "_" + self.date_file()
-        file = open("output/" + name_file + ".txt", "w")
-        result = s.yandex_search(query, page)
-        self.proc_manual(engine, query, page, result, name_file, file) #process
-        file.close()
-
-    def call_ask_search(self, query = "", page = ""):
-        engine = "ask"
-        name_file = engine + "_" + self.date_file()
-        file = open("output/" + name_file + ".txt", "w")
-        result = s.ask_search(query, page)
-        self.proc_manual(engine, query, page, result, name_file, file) #process
-        file.close()
-
-    def call_mojeek_search(self, query = "", page = ""):
-        engine = "mojeek"
-        name_file = engine + "_" + self.date_file()
-        file = open("output/" + name_file + ".txt", "w")
-        result = s.mojeek_search(query, page)
-        self.proc_manual(engine, query, page, result, name_file, file) #process
-        file.close()
-
-    def call_searx_search(self, query = "", page = ""):
-        engine = "searx"
-        name_file = engine + "_" + self.date_file()
-        file = open("output/" + name_file + ".txt", "w")
-        result = s.searx_search(query, page)
+        if engine == "google":
+            result = s.google_search(query, page)
+        elif engine == "duckduckgo":
+            result = s.duckduckgo_search(query, page)
+        elif engine == "bing":
+            result = s.bing_search(query, page)
+        elif engine == "yahoo":
+            result = s.yahoo_search(query, page)
+        elif engine == "yandex":
+            result = s.yandex_search(query, page)
+        elif engine == "ask":
+            result = s.ask_search(query, page)
+        elif engine == "mojeek":
+            result = s.mojeek_search(query, page)
+        elif engine == "searx":
+            result = s.searx_search(query, page)
         self.proc_manual(engine, query, page, result, name_file, file) #process
         file.close()
 
@@ -752,14 +718,23 @@ if __name__ == "__main__":
         print("7. Mojeek")
         print("8. Searx")
         print("99. Exit program")
-        try:
-            inp_searchEngine = input("Search engine: ")
-            if inp_searchEngine == "99":
-                print("Exiting the program...")
-            else:
-                Main_manual(inp_searchEngine)
-        except:
-            print("Your choice is wrong!")
+        # try:
+        #     inp_searchEngine = input("Search engine: ")
+        #     if inp_searchEngine == "99":
+        #         print("Exiting the program...")
+        #     else:
+        #         Main_manual(inp_searchEngine)
+        # except:
+        #     print("Your choice is wrong!")
+
+        
+        inp_searchEngine = input("Search engine: ")
+        if inp_searchEngine == "99":
+            print("Exiting the program...")
+        else:
+            Main_manual(inp_searchEngine)
+        
+        print("Your choice is wrong!")
             
     elif args.option == "auto":
         print(Main_auto().write_figlet())
