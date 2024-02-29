@@ -6,6 +6,7 @@ Big Dorker is a console-based tool used for dorking on multiple popular search e
 ## What new??
 - Addition of output file for dorking results.
 - addition of automated dorking feature.
+- Flexibility for dorking query development.
 
 ## Key Features
 
@@ -26,7 +27,7 @@ Big Dorker is a console-based tool used for dorking on multiple popular search e
 
 ## Usage
 
-```bash
+```
 billy@icwr:~/projects$ python3 search.py -h
 
 usage: search.py [-h] -o OPTION
