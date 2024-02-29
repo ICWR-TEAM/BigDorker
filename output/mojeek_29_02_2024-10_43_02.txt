@@ -1,0 +1,60 @@
+=========================================
+Query search: a
+Title: Find a Lawyer | Lawyers Near Me | FindLaw.com
+Domain: lawyers.findlaw.com
+URL: https://lawyers.findlaw.com/
+Description: ... and location, and we'll do the rest. ... Quickly find the lawyer you need with our directory of attorneys and law firms throughout the United States.
+=========================================
+Query search: a
+Title: Hark, a vagrant: 404
+Domain: www.harkavagrant.com
+URL: http://www.harkavagrant.com/
+Description: These comics go back to my early 20s, and I am a different person. ... Hark! is only one project, I personally am not going anywhere.
+=========================================
+Query search: a
+Title: Serie A - Football Italia
+Domain: football-italia.net
+URL: https://football-italia.net/serie-a/
+Description: How Napoli coaching staff will look post-Mazzarri as Calzona agrees terms Feb 19, 2024 18:02 ... Napoli coach Francesco Calzona has agreed terms on a ...
+=========================================
+Query search: a
+Title: A+E Networks EMEA
+Domain: www.aenetworks.tv
+URL: https://www.aenetworks.tv/
+Description: At A+E Networks EMEA, we share stories that matter. ... Personalities shine at A+E Networks EMEA. ... All articles
+=========================================
+Query search: a
+Title: A Church Near You
+Domain: www.achurchnearyou.com
+URL: https://www.achurchnearyou.com/
+Description: All age/Family ... has a listing on AChurchNearYou.com that you can update. ... All free and easy to edit, helping more people to find you online.
+=========================================
+Query search: a
+Title: The A.V. Club | Pop culture obsessives writing for the pop
+Domain: www.avclub.com
+URL: https://www.avclub.com/
+Description: Kevin Costner introduces Horizon: An American Saga in first trailer ... Who are all these people in James Gunn’s Superman: Legacy cast photo?
+=========================================
+Query search: a
+Title: Category:All articles with a promotional tone - Wikipedia
+Domain: en.wikipedia.org
+URL: https://en.wikipedia.org/wiki/Category:All_articles_with_a_promotional_tone
+Description: Language links are at the top of the page. ... Comics and anime ... Ma an Abu Nowar
+=========================================
+Query search: a
+Title: A CUP OF JO
+Domain: joannagoddard.blogspot.com
+URL: http://joannagoddard.blogspot.com/
+Description:  ... has moved to a new address:
+=========================================
+Query search: a
+Title: Immobilier : 878 957 annonces immobilières | Achat, vente
+Domain: www.avendrealouer.fr
+URL: https://www.avendrealouer.fr/
+Description: OPTIMISEZ VOTRE RECHERCHE AVEC NOTRE APPLICATION AVENDREALOUER  ... Recherche avancée location Location appartement Location maison
+=========================================
+Query search: a
+Title: Does Python have a ternary conditional operator? - Stack
+Domain: stackoverflow.com
+URL: https://stackoverflow.com/questions/394809/does-python-have-a-ternary-conditional-operator
+Description: It should be noted that what s within the [] s can be an arbitrary expression. ... That can be resolved by either using it as a statement, or better ...

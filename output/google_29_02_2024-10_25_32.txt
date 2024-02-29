@@ -1,0 +1,60 @@
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: Kasus Hepatitis A Meningkat, RSHS Minta Masyarakat ...
+Domain: regional.kompas.com
+URL: https://regional.kompas.com/read/2017/05/29/10124331/kasus.hepatitis.a.meningkat.rshs.minta.masyarakat.perhatikan.ini
+Description: 29 Mei 2017 — Saat ini, kasus hepatitis A di sejumlah daerah di Jawa Barat mengalami peningkatan. Untuk itu masyarakat diminta lebih berhati-hati dalam ...
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: /etc/portage/package.env - Gentoo wiki
+Domain: wiki.gentoo.org
+URL: https://wiki.gentoo.org/wiki//etc/portage/package.env
+Description: 1 Jan 2024 — These files can hook into specific phases of the emerge process. If all that is needed is to set environment variables, use a free-form file ...
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: How to convert a simple INI file contents into JSON?
+Domain: www.sololearn.com
+URL: https://www.sololearn.com/en/Discuss/2870565/config.ini
+Description: For a future project, I am planning to make some IDE-like program dealing with INI files. Probably Python or JavaScript.
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: Immigrate and get a residence permit | ...
+Domain: residencies.io
+URL: https://residencies.io/filter/temporary-residency/benefit/boot.ini
+Description: Compare available temporary and permanent residency programs worldwide for entrepreneurs, investors, retirees and persons of independent means.
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: Associate a Public Host Monitoring Template
+Domain: pingancloud.com
+URL: https://pingancloud.com/ssr/help/manage/argus/cfg.public.config
+Description: After creating an alarm template, you need to associate it to the public host to be monitored. At present, there are two operation methods of associating an ...
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: Environmental Policy
+Domain: greathallingburymanor.co.uk
+URL: http://greathallingburymanor.co.uk/.env
+Description: Ensure that all employees provide a duty of care to the environment and the effects that their actions cause, also what benefits lie in improving environmental ...
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: project.config - TF-A - Gitiles - Gerrit Code Review
+Domain: review.trustedfirmware.org
+URL: https://review.trustedfirmware.org/plugins/gitiles/TF-A/+/21ae8d57d006c4a3cfddaeedfde51c9acd4babdb/project.config
+Description: # It sets the Verified score. [label "Allow-CI"].
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: Diagram.Svg.Config - elm-wiring-diagrams 5.4.7
+Domain: package.elm-lang.org
+URL: https://package.elm-lang.org/packages/jcberentsen/elm-wiring-diagrams/latest/Diagram.Svg.Config
+Description: Diagram.Svg.Config. Configure how to convert Layout Labels to Strings for Svg output. type alias Config a msg =.
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: app.config.ts · Nuxt Directory Structure
+Domain: v3.nuxtjs.org
+URL: https://v3.nuxtjs.org/guide/directory-structure/app.config
+Description: Nuxt tries to automatically generate a TypeScript interface from provided app config so you won't have to type it yourself. However, there are some cases where ...
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: Gem #141 : Con-figure it out
+Domain: www.adacore.com
+URL: https://www.adacore.com/gems/gem-141-gnatcoll.config
+Description: Configuration files are user- or machine-editable files. This is a general term, though, which does not imply any specific format. Several formats are ...
