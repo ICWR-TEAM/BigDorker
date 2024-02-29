@@ -7,6 +7,7 @@ Big Dorker is a console-based tool used for dorking on multiple popular search e
 - Addition of output file for dorking results.
 - addition of automated dorking feature.
 - Flexibility for dorking query development.
+- Fix bug in Mojeek search engine.
 
 ## Key Features
 
