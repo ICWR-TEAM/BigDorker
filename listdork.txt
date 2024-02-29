@@ -1,0 +1,57 @@
+filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+intitle:"index of" intext:".env"
+intitle:"index of" intext:"docker-compose.yml"
+intext:APP_ENV
+intext:DB_PASSWORD
+intext:aws_access_key_id
+intext:aws_secret_access_key
+intext:GITHUB_TOKEN
+intext:AWS_ACCESS_KEY_ID
+intext:AWS_SECRET_ACCESS_KEY
+intext:GITHUB_TOKEN
+intext:db_password
+intext:mysql_password
+intext:api_key
+intext:api_token
+intext:access_token
+intext:authorization_token
+intext:jwt
+intext:jwt_token
+intext:password
+intitle:index.of
+ext:xml | ext:conf | ext:cnf | ext:reg | ext:inf | ext:rdp | ext:cfg | ext:txt | ext:ora | ext:ini
+ext:sql | ext:dbf | ext:mdb
+ext:log
+ext:bkf | ext:bkp | ext:bak | ext:old | ext:backup
+inurl:login
+intext:"sql syntax near" | intext:"syntax error has occurred" | intext:"incorrect syntax near" | intext:"unexpected end of SQL command" | intext:"Warning: mysql_connect()" | intext:"Warning: mysql_query()" | intext:"Warning: pg_connect()"
+ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv
+ext:php intitle:phpinfo "published by the PHP Group"
+inurl:wp- | inurl:wp-content | inurl:plugins | inurl:uploads | inurl:themes | inurl:download
+inurl:shell | inurl:backdoor | inurl:wso | inurl:cmd | shadow | passwd | boot.ini | inurl:backdoor
+inurl:readme | inurl:license | inurl:install | inurl:setup | inurl:config
+inurl:redir | inurl:url | inurl:redirect | inurl:return | inurl:src=http | inurl:r=http
+ext:action | ext:struts | ext:do
+site:pastebin.com
+site:linkedin.com employees
+inurl:"/phpinfo.php" | inurl:".htaccess" | inurl:"/.git" -github
+site:*.
+site:*.*.
+inurl:wp-content | inurl:wp-includes
+"index of /" + password.txt
+intitle:"Index Of" inurl:admin
+intitle:"Index of" .git/config
+intitle:"Index of" .env
+ext:log inurl:login password
+site:facebook.com inurl:about.php intext:"phone"
+site:linkedin.com intitle:"resume" OR intitle:"cv"
+site:twitter.com intitle:"bio" AND "location"
+ext:sql intext:"phpMyAdmin" intitle:"dump" filetype:sql
+intitle:"Index of" /admin
+intitle:"Index of" /config
+intitle:"Index of" /database
+filetype:sql password
+filetype:log username password
+ext:ini password
+ext:sh key
+ext:conf aws_access_key_id
