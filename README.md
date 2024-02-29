@@ -22,6 +22,7 @@ Big Dorker is a console-based tool used for dorking on multiple popular search e
 3. Open a terminal or command prompt and navigate to the directory where you saved the source code.
 4. Run `pip install -r requirements.txt` to install the required dependencies.
 5. Run Big Dorker by executing the command `python search.py --o 'manual'/'auto'`.
+6. For updating the list in the auto-dorking feature, you can modify the ```listdork.txt``` file with the condition: ```new line for separator```.
 
 ## Usage
 
