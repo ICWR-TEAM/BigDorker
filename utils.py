@@ -1,31 +1,19 @@
-from fake_useragent import UserAgent
-import requests
 from datetime import datetime
 import argparse, time, sys
+from curl_cffi import requests
 
 
 def ua():
     return UserAgent().chrome
 
-
 def req(url, req_headers):
-    if req_headers == "duckduckgo":
-        header = {
-            "Authority": "html.duckduckgo.com",
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
-        }
-    elif req_headers == "google":
-        header = {"User-Agent": ua()}
-    elif req_headers == "bing":
-        header = {"User-Agent": ua()}
-    else:
-        header = {"User-Agent": ua()}
+    get_data = requests.get(url, impersonate="chrome")
+    response = get_data.text
+    return response
 
-    req = requests.get(url, headers=header)
-    return req
-
-
-#system at search.py
+#####################################################
+#                 System at search.py               #
+#####################################################
 
 def list_querys(key = ""):
     list = open("listdork.txt", "r").read()

@@ -1,5 +1,5 @@
 import SearchEngine
-import argparse, time, sys
+import argparse, time
 import utils
 
 s = SearchEngine

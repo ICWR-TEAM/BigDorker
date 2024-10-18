@@ -1,13 +1,12 @@
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, quote_plus, unquote
-import re
-import requests
 import json
 import utils
 
 
-
-
+#####################################
+#            Bing Search            #
+#####################################
 def bing_search(query, page_start):
     result_array = []
     req_res = utils.req(
@@ -17,7 +16,7 @@ def bing_search(query, page_start):
         + str(page_start)
         + "&FORM=PERE",
         "bing",
-    ).text
+    )
     result_bs4 = BeautifulSoup(req_res, "html.parser")
     res_title = result_bs4.find_all("h2", style_="")
     res_decription = result_bs4.find_all("p")
@@ -46,6 +45,9 @@ def bing_search(query, page_start):
     return result_array
 
 
+#####################################
+#        DuckDuckGo Search          #
+#####################################
 def duckduckgo_search(query="", page_start=0):
     result_array = []
     req_res = utils.req(
@@ -54,7 +56,7 @@ def duckduckgo_search(query="", page_start=0):
         + "&b="
         + str(page_start),
         "duckduckgo",
-    ).text
+    )
     result_bs4 = BeautifulSoup(req_res, "html.parser")
     res_title = result_bs4.find_all("h2", class_="result__title")
     res_url = result_bs4.find_all("a", class_="result__a")
@@ -76,6 +78,9 @@ def duckduckgo_search(query="", page_start=0):
     return result_array
 
 
+#####################################
+#            Google Search          #
+#####################################
 def google_search(query="", page_start=0):
     result_array = []
     req_res = utils.req(
@@ -84,7 +89,7 @@ def google_search(query="", page_start=0):
         + "&start="
         + str(page_start),
         "google",
-    ).text
+    )
     result = BeautifulSoup(req_res, "html.parser")
     res_title = result.find_all("h3", class_="LC20lb")
     res_deskripsi = result.find_all("div", class_="VwiC3b")
@@ -101,12 +106,16 @@ def google_search(query="", page_start=0):
         result_array.append(join_dict)
     return result_array
 
+
+#####################################
+#            Yahoo Search           #
+#####################################
 def yahoo_search(query = "", page_start = 1):
     result_array = []
     req_res = utils.req(
         "https://search.yahoo.com/search?p=" + quote_plus(str(query)) + "&b=" + str(page_start),
         "yahoo"
-    ).text
+    )
     result = BeautifulSoup(req_res, "html.parser")
     res_title = result.find_all("a", class_="d-ib fz-20 ls-024 lh-19 td-hu tc va-bot mxw-100p mt-8")
     res_description = result.find_all("p", class_="fc-dustygray fz-14 lh-22 ls-02 mah-44 ov-h d-box fbox-ov fbox-lc2")
@@ -125,12 +134,16 @@ def yahoo_search(query = "", page_start = 1):
         result_array.append(join_dict)
     return result_array
 
+
+#####################################
+#           Yandex Search           #
+#####################################
 def yandex_search(query = "", page_start = 0):
     result_array = []
     req_res = utils.req(
         "https://yandex.com/search/?text=" + quote_plus(str(query)) + "&p=" + str(page_start),
         "yandex"
-    ).text
+    )
     result = BeautifulSoup(req_res, "html.parser")
     res_title = result.find_all("h2", class_="OrganicTitle-LinkText Typo Typo_text_l Typo_line_m organic__url-text")
     res_description = result.find_all("div", class_="TextContainer OrganicText organic__text text-container Typo Typo_text_m Typo_line_m")
@@ -148,12 +161,16 @@ def yandex_search(query = "", page_start = 0):
         result_array.append(join_dict)
     return result_array
     
+    
+#####################################
+#             ASK Search            #
+#####################################
 def ask_search(query = "", page_start = 0):
     result_array = []
     req_res = utils.req(
         "https://www.ask.com/web?q=" + quote_plus(str(query)) + "&page=" + str(page_start),
         "ask"
-    ).text
+    )
     result = BeautifulSoup(req_res, "html.parser")
     result_json_ask = []
 
@@ -191,12 +208,16 @@ def ask_search(query = "", page_start = 0):
             result_array.append(join_dict)
     return result_array
 
+
+#####################################
+#           Mojeek Search           #
+#####################################
 def mojeek_search(query = "", page_start = 0):
     result_array = []
     req_res = utils.req(
         "https://www.mojeek.com/search?q=" + quote_plus(str(query)) + "&s=" + str(page_start),
         "mojeek"
-    ).text
+    )
     result = BeautifulSoup(req_res, "html.parser")
     res_title = result.find_all("a", class_="title")
     res_url = res_title
@@ -213,12 +234,15 @@ def mojeek_search(query = "", page_start = 0):
         result_array.append(join_dict)
     return result_array
 
+#####################################
+#            Searx Search           #
+#####################################
 def searx_search(query = "", page_start = ""):
     result_array = []
     req_res = utils.req(
         "https://searx.thegpm.org/?q=" + quote_plus(str(query)),
         "searx"
-    ).text
+    )
     result = BeautifulSoup(req_res, "html.parser")
     res_title = result.find_all("h4", class_="result_header")
     res_description = result.find_all("p", class_="result-content")

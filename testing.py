@@ -4,6 +4,8 @@ from urllib.parse import urlparse, quote_plus, unquote
 import re
 import requests
 import json
+
+
 def yahoo_search(query = "", page_start = 1):
     result_array = []
     req_res = req(
