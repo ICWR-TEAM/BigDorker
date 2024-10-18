@@ -33,7 +33,7 @@ class System:
         return formatted_time
 
     def write_figlet(self):
-        return """
+        return r"""
         ______  _         ______               _                
         | ___ \(_)        |  _  \             | |               
         | |_/ / _   __ _  | | | |  ___   _ __ | | __  ___  _ __ 
@@ -61,7 +61,7 @@ class System:
         print(f"Description: {value['description']}")
         print("=========================================")
 
-    def loading_animation(self, frames=20, chars="/—\|", delay=0.1):
+    def loading_animation(self, frames=20, chars=r"/—\|", delay=0.1):
         for i in range(frames):
             sys.stdout.write(chars[i % len(chars)])
             sys.stdout.flush()
