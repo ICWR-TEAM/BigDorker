@@ -1,14 +1,16 @@
 # Big Dorker
-![image](https://github.com/user-attachments/assets/1a6c4f91-ff71-40f3-88bc-b993ebb43668)
+![image](https://github.com/user-attachments/assets/24c35b70-2ff3-4a5b-b551-8c94b78916ac)
+
 
 
 Big Dorker is a console-based tool used for dorking on multiple popular search engines such as Google, DuckDuckGo, Bing, Yahoo, Yandex, Ask, Mojeek, and Searx. Dorking is a search technique used by security researchers and information security professionals to find sensitive information that is inadvertently exposed in publicly available databases and documents online.
 
 ## What new??
 - Addition of output file for dorking results.
-- addition of automated dorking feature.
+- Addition of automated dorking feature.
 - Flexibility for dorking query development.
 - Fix bug in Mojeek search engine.
+- Added for proxy
 
 ## Key Features
 
@@ -30,15 +32,15 @@ Big Dorker is a console-based tool used for dorking on multiple popular search e
 ## Usage
 
 ```
-billy@icwr:~/projects$ python3 search.py -h
-
-usage: search.py [-h] -o OPTION
+billy@billy:/bigdorker$ python3 search.py  -h
+usage: search.py [-h] -o OPTION [-x PROXY]
 
 options:
   -h, --help            show this help message and exit
   -o OPTION, --option OPTION
                         Give your choice ('manual' or 'auto')
-
+  -x PROXY, --proxy PROXY
+                        Give your proxy (use http/https) *OPTIONAL
 ```
 
 
