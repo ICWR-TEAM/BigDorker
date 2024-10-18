@@ -90,6 +90,7 @@ class System:
         sys.stdout.flush()
 
     def proc_manual(self, engine, query_search, pages, value, name_file, file):
+        many_search = 0
         page = pages
         for res in value:
             requests_value = {
@@ -111,30 +112,46 @@ class System:
                 # callback function
                 if engine == "bing":
                     result = s.bing_search(query_search, page)
+                    if not result:
+                        many_search += 1
                     page += 10
                 elif engine == "google":
                     result = s.google_search(query_search, page)
+                    if not result:
+                        many_search += 1
                     page += 10
                 elif engine == "duckduckgo":
                     result = s.duckduckgo_search(query_search, page)
+                    if not result:
+                        many_search += 1
                     page += 10
                 elif engine == "yahoo":
                     result = s.yahoo_search(query_search, page)
+                    if not result:
+                        many_search += 1
                     page += 7
                 elif engine == "yandex":
                     result = s.yandex_search(query_search, page)
+                    if not result:
+                        many_search += 1
                     page += 1
                 elif engine == "ask":
                     result = s.ask_search(query_search, page)
+                    if not result:
+                        many_search += 1
                     page += 1
                 elif engine == "mojeek":
                     result = s.mojeek_search(query_search, page)
+                    if not result:
+                        many_search += 1
                     page += 10
                 elif engine == "searx":
                     result = s.searx_search(query_search, page)
+                    if not result:
+                        many_search += 1
                     page += 10
 
-                if not result:
+                if many_search > 2 and not result:
                     print("Search not found!")
                     print("\n[*]Stopped: File is in output/" + name_file + ".txt")
                     break

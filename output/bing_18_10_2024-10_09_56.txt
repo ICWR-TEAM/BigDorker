@@ -1,0 +1,30 @@
+=========================================
+Query search: a
+Title: HTML encoding issues - "Â" character showing up instead of "…
+Domain: 
+URL: 
+Description: I've got a legacy app just starting to misbehave, for whatever reason I'm not sure. It generates a bunch of HTML that gets turned into PDF reports by ActivePDF. The process …
+=========================================
+Query search: a
+Title: encoding - "â€™" showing on page instead of - Stack Overflow
+Domain: 
+URL: 
+Description: Mar 19, 2010 · I am using ASP.NET 2.0 with a database. This is most likely where your problem lies. You need to verify with an independent database tool what the data …
+=========================================
+Query search: a
+Title: How to convert these strange characters? (Ã«, Ã, Ã¬, Ã¹, Ã)
+Domain: 
+URL: 
+Description: utf8_encode() and utf8_decode convert data from and to ISO-8859-1. In a modern web site setup where the database, the database connection, and the output page encoding …
+=========================================
+Query search: a
+Title: Strange Characters in database text: Ã, Ã, ¢, â‚ - Stack Overflow
+Domain: 
+URL: 
+Description: Oct 22, 2011 · This is surely an encoding problem. You have a different encoding in your database and in your website and this fact …
+=========================================
+Query search: a
+Title: html - a tag as a submit button? - Stack Overflow
+Domain: 
+URL: 
+Description: Sep 7, 2011 · Now available on Stack Overflow for Teams! AI features where you work: search, IDE, and chat. Learn more Explore Teams

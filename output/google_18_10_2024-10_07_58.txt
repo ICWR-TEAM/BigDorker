@@ -1,0 +1,60 @@
+=========================================
+Query search: a
+Title: World Health Organization (WHO)
+Domain: www.who.int
+URL: https://www.who.int/
+Description: Latest on emergencies ; Marburg virus disease in Rwanda. Man in white lab coat looking into a microscope. Read the latest update ; Health situation in Lebanon ...
+=========================================
+Query search: a
+Title: Apply for or renew a Blue Badge
+Domain: www.gov.uk
+URL: https://www.gov.uk/apply-blue-badge
+Description: A Blue Badge costs up to £10 in England and £20 in Scotland. It's free in Wales. They usually last up to 3 years. You must reapply for a Blue Badge before your ...
+=========================================
+Query search: a
+Title: Health A to Z
+Domain: www.nhs.uk
+URL: https://www.nhs.uk/conditions/
+Description: When autocomplete results are available use up and down arrows to review and enter to select. Touch device users, explore by touch or with swipe gestures.
+=========================================
+Query search: a
+Title: How To File A VA Disability Claim | Veterans Affairs
+Domain: www.va.gov
+URL: https://www.va.gov/disability/how-to-file-claim/
+Description: 8 Okt 2024 — How to file a VA disability claim · Get VA Form 21-526EZ to download · Find a VA regional office near you · Find out how to submit an intent to ...
+=========================================
+Query search: a
+Title: Search probate records for documents and wills (England and ...
+Domain: probatesearch.service.gov.uk
+URL: https://probatesearch.service.gov.uk/
+Description: beta This is a new service – your feedback will help us to improve it. Service. Search probate records or find a will. This service is for England and Wales ...
+=========================================
+Query search: a
+Title: Facebook
+Domain: business.facebook.com
+URL: https://business.facebook.com/
+Description: Ads Manager · Log in with Facebook · Log in with Instagram · Log in with a managed Meta account.
+=========================================
+Query search: a
+Title: ‎Gemini - chat to supercharge your ideas
+Domain: gemini.google.com
+URL: https://gemini.google.com/
+Description: Sign in. Gemini. FAQ. What's wrong with this? Create a ste ...
+=========================================
+Query search: a
+Title: Create Account | Federal Student Aid
+Domain: studentaid.gov
+URL: https://studentaid.gov/fsa-id/create-account/launch
+Description: Create a StudentAid.gov account to log in to U.S. Department of Education systems and sign student loan documents and the FAFSA ® form electronically.
+=========================================
+Query search: a
+Title: Google Accounts: Sign in
+Domain: accounts.google.com
+URL: https://accounts.google.com/
+Description: Not your computer? Use Guest mode to sign in privately. Learn more about using Guest mode. Next. Create account. For my personal use; For work or my ...
+=========================================
+Query search: a
+Title: Red Cross Training | Take a Class
+Domain: www.redcross.org
+URL: https://www.redcross.org/take-a-class
+Description: In-Person + Online (Blended) · Combines in-person sessions with self-paced, interactive online instruction · Complete online course, then demonstrate ...
