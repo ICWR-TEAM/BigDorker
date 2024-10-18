@@ -1,93 +1,10 @@
 import SearchEngine
 import argparse, time, sys
-from datetime import datetime
+import utils
 
 s = SearchEngine
 
 class System:
-    global s
-
-    def list_querys(self, key = ""):
-        list = open("listdork.txt", "r").read()
-        split_list = list.split("\n")
-        if key == "":
-            return split_list
-        else:
-            return split_list[int(key)]
-
-    def print_choice(self):
-        print(self.write_figlet())
-        print("1. Google")
-        print("2. DuckDuckGo")
-        print("3. Bing")
-        print("4. Yahoo!")
-        print("5. Yandex")
-        print("6. Ask")
-        print("7. Mojeek")
-        print("8. Searx")
-        print("99. Exit program")
-
-    def date_file(self):
-        now = datetime.now()
-        formatted_time = now.strftime("%d_%m_%Y-%H_%M_%S")
-        return formatted_time
-
-    def write_figlet(self):
-        return r"""
-        ______  _         ______               _                
-        | ___ \(_)        |  _  \             | |               
-        | |_/ / _   __ _  | | | |  ___   _ __ | | __  ___  _ __ 
-        | ___ \| | / _` | | | | | / _ \ | '__|| |/ / / _ \| '__|
-        | |_/ /| || (_| | | |/ / | (_) || |   |   < |  __/| |   
-        \____/ |_| \__, | |___/   \___/ |_|   |_|\_\ \___||_|   
-                    __/ |                                       
-                   |___/                                                    
-        """
-    
-    def write_file(self, file, query_search, value):
-        file.write("=========================================\n")
-        file.write(f"Query search: {query_search}\n")
-        file.write(f"Title: {value['title']}\n")
-        file.write(f"Domain: {value['domain']}\n")
-        file.write(f"URL: {value['url']}\n")
-        file.write(f"Description: {value['description']}\n")
-
-    def print_value(self, query_search, value):
-        print("=========================================")
-        print(f"Query search: {query_search}")
-        print(f"Title: {value['title']}")
-        print(f"Domain: {value['domain']}")
-        print(f"URL: {value['url']}")
-        print(f"Description: {value['description']}")
-        print("=========================================")
-
-    def loading_animation(self, frames=20, chars=r"/—\|", delay=0.1):
-        for i in range(frames):
-            sys.stdout.write(chars[i % len(chars)])
-            sys.stdout.flush()
-            time.sleep(delay)  
-            sys.stdout.write("\b")  
-
-    def date_file(self):
-        now = datetime.now()
-        formatted_time = now.strftime("%d_%m_%Y-%H_%M_%S")
-        return formatted_time
-
-    def next_loading(self):
-        sys.stdout.write("\033[F")
-        sys.stdout.write("\033[K")
-        sys.stdout.write("=========================================\n")
-        sys.stdout.write("Next search ")
-        self.loading_animation()
-        sys.stdout.write("\n")
-        sys.stdout.flush()
-
-    def not_result(self, query):
-        sys.stdout.write("\033[F")
-        sys.stdout.write("\033[K")
-        sys.stdout.write(f"Query search: {query}")
-        sys.stdout.write("\nSearch not found...\n")
-        sys.stdout.flush()
 
     def proc_manual(self, engine, query_search, pages, value, name_file, file):
         many_search = 0
@@ -99,15 +16,15 @@ class System:
                 "url": res['data']['url'],
                 "description": res['data']['description']
             }
-            self.write_file(file, query_search, requests_value)
-            self.print_value(query_search, requests_value)
+            utils.write_file(file, query_search, requests_value)
+            utils.print_value(query_search, requests_value)
         while True:
             print("1. Next")
             print("2. Stop")
             inp_next = input("Next or stop (Enter number): ")
             print("=========================================")
             if inp_next == '1':
-                print(self.write_figlet())
+                print(utils.write_figlet())
 
                 # callback function
                 if engine == "bing":
@@ -162,8 +79,8 @@ class System:
                         "url": res['data']['url'],
                         "description": res['data']['description']
                     }
-                    self.write_file(file, query_search, requests_value)
-                    self.print_value(query_search, requests_value)
+                    utils.write_file(file, query_search, requests_value)
+                    utils.print_value(query_search, requests_value)
             elif inp_next == '2':
                 print("\n[*]Stopped: File is in output/" + name_file + ".txt")
                 break
@@ -171,7 +88,7 @@ class System:
                 print("Invalid input. Please enter '1' or '2'.")
 
     def proc_auto(self, engine, query_search, pages, delay, name_file, file):
-        for list_query in self.list_querys():
+        for list_query in utils.list_querys():
             query = query_search + " " + list_query
             if engine == "google":
                 result = s.google_search(query, pages)
@@ -201,12 +118,12 @@ class System:
                         "url": res['data']['url'],
                         "description": res['data']['description']
                     }
-                    self.write_file(file, query, requests_value)
-                    self.print_value(query, requests_value)
+                    utils.write_file(file, query, requests_value)
+                    utils.print_value(query, requests_value)
 
-                self.next_loading()
+                utils.next_loading()
                 if not result:
-                    self.not_result(query)
+                    utils.not_result(query)
                 print("=========================================\n")
                 time.sleep(int(delay))
             except KeyboardInterrupt:
@@ -266,7 +183,7 @@ class Main_manual(System):
             print("Your keywoard is wrong!")
 
     def call_search(self, engine, query, page):
-        name_file = engine + "_" + self.date_file()
+        name_file = engine + "_" + utils.date_file()
         file = open("output/" + name_file + ".txt", "w")
         if engine == "google":
             result = s.google_search(query, page)
@@ -342,7 +259,7 @@ class Main_auto(System):
             print("Your keywoard is wrong!")
 
     def call_search(self, engine, query, page, delay):
-        name_file = engine + "_" + self.date_file()
+        name_file = engine + "_" + utils.date_file()
         file = open("output/" + name_file + ".txt", "w")
         self.proc_auto(engine, query, page, delay, name_file, file)
         file.close()
@@ -353,24 +270,39 @@ if __name__ == "__main__":
     parser.add_argument("-o","--option", help="Give your choice ('manual' or 'auto')", type=str, required=True)
     args = parser.parse_args()
     if args.option == "manual":
-        System().print_choice()
-        try:
-            inp_searchEngine = input("Search engine: ")
-            if inp_searchEngine == "99":
-                print("Exiting the program...")
-            else:
-                Main_manual(inp_searchEngine)
-        except:
-            print("Your choice is wrong!")
+        utils.print_choice()
+        
+        inp_searchEngine = input("Search engine: ")
+        if inp_searchEngine == "99":
+            print("Exiting the program...")
+        else:
+            Main_manual(inp_searchEngine)
+        # try:
+        #     inp_searchEngine = input("Search engine: ")
+        #     if inp_searchEngine == "99":
+        #         print("Exiting the program...")
+        #     else:
+        #         Main_manual(inp_searchEngine)
+        # except:
+        #     print("Your choice is wrong!")
             
     elif args.option == "auto":
-        System().print_choice()
-        try:
-            inp_searchEngine = input("Search engine: ")
-            if inp_searchEngine == "99":
-                print("Exiting the program...")
-            else:
-                inp_time =  input("Delay/second(default 4/s): ")
-                Main_auto(inp_searchEngine, inp_time)
-        except:
-            print("Your input is wrong(please check documentation)!")
+        utils.print_choice()
+        
+        inp_searchEngine = input("Search engine: ")
+        if inp_searchEngine == "99":
+            print("Exiting the program...")
+        else:
+            inp_time =  input("Delay/second(default 4/s): ")
+            Main_auto(inp_searchEngine, inp_time)
+        
+            # print("Your input is wrong(please check documentation)!")
+        # try:
+        #     inp_searchEngine = input("Search engine: ")
+        #     if inp_searchEngine == "99":
+        #         print("Exiting the program...")
+        #     else:
+        #         inp_time =  input("Delay/second(default 4/s): ")
+        #         Main_auto(inp_searchEngine, inp_time)
+        # except:
+        #     print("Your input is wrong(please check documentation)!")

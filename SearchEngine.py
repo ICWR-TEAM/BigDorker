@@ -1,38 +1,16 @@
 from bs4 import BeautifulSoup
-from fake_useragent import UserAgent
 from urllib.parse import urlparse, quote_plus, unquote
 import re
 import requests
 import json
+import utils
 
 
-def proc():
-    pass
 
-
-def ua():
-    return UserAgent().chrome
-
-
-def req(url, req_headers):
-    if req_headers == "duckduckgo":
-        header = {
-            "Authority": "html.duckduckgo.com",
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
-        }
-    elif req_headers == "google":
-        header = {"User-Agent": ua()}
-    elif req_headers == "bing":
-        header = {"User-Agent": ua()}
-    else:
-        header = {"User-Agent": ua()}
-
-    req = requests.get(url, headers=header)
-    return req
 
 def bing_search(query, page_start):
     result_array = []
-    req_res = req(
+    req_res = utils.req(
         "https://www.bing.com/search?q="
         + quote_plus(str(query))
         + "&first="
@@ -70,7 +48,7 @@ def bing_search(query, page_start):
 
 def duckduckgo_search(query="", page_start=0):
     result_array = []
-    req_res = req(
+    req_res = utils.req(
         "https://html.duckduckgo.com/html/?q="
         + quote_plus(str(query))
         + "&b="
@@ -100,7 +78,7 @@ def duckduckgo_search(query="", page_start=0):
 
 def google_search(query="", page_start=0):
     result_array = []
-    req_res = req(
+    req_res = utils.req(
         "https://www.google.com/search?q="
         + quote_plus(str(query))
         + "&start="
@@ -125,7 +103,7 @@ def google_search(query="", page_start=0):
 
 def yahoo_search(query = "", page_start = 1):
     result_array = []
-    req_res = req(
+    req_res = utils.req(
         "https://search.yahoo.com/search?p=" + quote_plus(str(query)) + "&b=" + str(page_start),
         "yahoo"
     ).text
@@ -149,7 +127,7 @@ def yahoo_search(query = "", page_start = 1):
 
 def yandex_search(query = "", page_start = 0):
     result_array = []
-    req_res = req(
+    req_res = utils.req(
         "https://yandex.com/search/?text=" + quote_plus(str(query)) + "&p=" + str(page_start),
         "yandex"
     ).text
@@ -172,7 +150,7 @@ def yandex_search(query = "", page_start = 0):
     
 def ask_search(query = "", page_start = 0):
     result_array = []
-    req_res = req(
+    req_res = utils.req(
         "https://www.ask.com/web?q=" + quote_plus(str(query)) + "&page=" + str(page_start),
         "ask"
     ).text
@@ -215,7 +193,7 @@ def ask_search(query = "", page_start = 0):
 
 def mojeek_search(query = "", page_start = 0):
     result_array = []
-    req_res = req(
+    req_res = utils.req(
         "https://www.mojeek.com/search?q=" + quote_plus(str(query)) + "&s=" + str(page_start),
         "mojeek"
     ).text
@@ -237,7 +215,7 @@ def mojeek_search(query = "", page_start = 0):
 
 def searx_search(query = "", page_start = ""):
     result_array = []
-    req_res = req(
+    req_res = utils.req(
         "https://searx.thegpm.org/?q=" + quote_plus(str(query)),
         "searx"
     ).text
