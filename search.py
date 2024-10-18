@@ -268,7 +268,7 @@ class Main_auto(System):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-o","--option", help="Give your choice ('manual' or 'auto')", type=str, required=True)
-    parser.add_argument("-x","--proxy", help="Give your proxy (use http/https)", type=str, required=False)
+    parser.add_argument("-x","--proxy", help="Give your proxy (use http/https) *OPTIONAL", type=str, required=False)
     args = parser.parse_args()
     if args.option == "manual":
         utils.print_choice()
