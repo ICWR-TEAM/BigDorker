@@ -6,8 +6,15 @@ from curl_cffi import requests
 def ua():
     return UserAgent().chrome
 
-def req(url, req_headers):
-    get_data = requests.get(url, impersonate="chrome")
+def req(url, req_headers, proxies):
+    if proxies:
+        protocol_proxies = proxies.split("://")
+        proxy_connect = {
+            protocol_proxies[0]: proxies
+        }
+        get_data = requests.get(url, impersonate="chrome", proxies=proxy_connect)
+    else:
+        get_data = requests.get(url, impersonate="chrome")
     response = get_data.text
     return response
 

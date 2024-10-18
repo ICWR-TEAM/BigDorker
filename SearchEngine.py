@@ -7,7 +7,7 @@ import utils
 #####################################
 #            Bing Search            #
 #####################################
-def bing_search(query, page_start):
+def bing_search(query, page_start, proxies = False):
     result_array = []
     req_res = utils.req(
         "https://www.bing.com/search?q="
@@ -16,6 +16,7 @@ def bing_search(query, page_start):
         + str(page_start)
         + "&FORM=PERE",
         "bing",
+        proxies
     )
     result_bs4 = BeautifulSoup(req_res, "html.parser")
     res_title = result_bs4.find_all("h2", style_="")
@@ -48,7 +49,7 @@ def bing_search(query, page_start):
 #####################################
 #        DuckDuckGo Search          #
 #####################################
-def duckduckgo_search(query="", page_start=0):
+def duckduckgo_search(query="", page_start=0, proxies = False):
     result_array = []
     req_res = utils.req(
         "https://html.duckduckgo.com/html/?q="
@@ -56,6 +57,7 @@ def duckduckgo_search(query="", page_start=0):
         + "&b="
         + str(page_start),
         "duckduckgo",
+        proxies
     )
     result_bs4 = BeautifulSoup(req_res, "html.parser")
     res_title = result_bs4.find_all("h2", class_="result__title")
@@ -81,7 +83,7 @@ def duckduckgo_search(query="", page_start=0):
 #####################################
 #            Google Search          #
 #####################################
-def google_search(query="", page_start=0):
+def google_search(query="", page_start=0, proxies = False):
     result_array = []
     req_res = utils.req(
         "https://www.google.com/search?q="
@@ -89,6 +91,7 @@ def google_search(query="", page_start=0):
         + "&start="
         + str(page_start),
         "google",
+        proxies
     )
     result = BeautifulSoup(req_res, "html.parser")
     res_title = result.find_all("h3", class_="LC20lb")
@@ -110,11 +113,12 @@ def google_search(query="", page_start=0):
 #####################################
 #            Yahoo Search           #
 #####################################
-def yahoo_search(query = "", page_start = 1):
+def yahoo_search(query = "", page_start = 1, proxies = False):
     result_array = []
     req_res = utils.req(
         "https://search.yahoo.com/search?p=" + quote_plus(str(query)) + "&b=" + str(page_start),
-        "yahoo"
+        "yahoo",
+        proxies
     )
     result = BeautifulSoup(req_res, "html.parser")
     res_title = result.find_all("a", class_="d-ib fz-20 ls-024 lh-19 td-hu tc va-bot mxw-100p mt-8")
@@ -138,11 +142,12 @@ def yahoo_search(query = "", page_start = 1):
 #####################################
 #           Yandex Search           #
 #####################################
-def yandex_search(query = "", page_start = 0):
+def yandex_search(query = "", page_start = 0, proxies = False):
     result_array = []
     req_res = utils.req(
         "https://yandex.com/search/?text=" + quote_plus(str(query)) + "&p=" + str(page_start),
-        "yandex"
+        "yandex",
+        proxies
     )
     result = BeautifulSoup(req_res, "html.parser")
     res_title = result.find_all("h2", class_="OrganicTitle-LinkText Typo Typo_text_l Typo_line_m organic__url-text")
@@ -165,11 +170,12 @@ def yandex_search(query = "", page_start = 0):
 #####################################
 #             ASK Search            #
 #####################################
-def ask_search(query = "", page_start = 0):
+def ask_search(query = "", page_start = 0, proxies = False):
     result_array = []
     req_res = utils.req(
         "https://www.ask.com/web?q=" + quote_plus(str(query)) + "&page=" + str(page_start),
-        "ask"
+        "ask",
+        proxies
     )
     result = BeautifulSoup(req_res, "html.parser")
     result_json_ask = []
@@ -212,11 +218,12 @@ def ask_search(query = "", page_start = 0):
 #####################################
 #           Mojeek Search           #
 #####################################
-def mojeek_search(query = "", page_start = 0):
+def mojeek_search(query = "", page_start = 0, proxies = False):
     result_array = []
     req_res = utils.req(
         "https://www.mojeek.com/search?q=" + quote_plus(str(query)) + "&s=" + str(page_start),
-        "mojeek"
+        "mojeek",
+        proxies        
     )
     result = BeautifulSoup(req_res, "html.parser")
     res_title = result.find_all("a", class_="title")
@@ -237,11 +244,12 @@ def mojeek_search(query = "", page_start = 0):
 #####################################
 #            Searx Search           #
 #####################################
-def searx_search(query = "", page_start = ""):
+def searx_search(query = "", page_start = "", proxies = False):
     result_array = []
     req_res = utils.req(
         "https://searx.thegpm.org/?q=" + quote_plus(str(query)),
-        "searx"
+        "searx",
+        proxies
     )
     result = BeautifulSoup(req_res, "html.parser")
     res_title = result.find_all("h4", class_="result_header")
