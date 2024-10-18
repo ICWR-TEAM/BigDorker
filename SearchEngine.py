@@ -130,8 +130,8 @@ def yahoo_search(query = "", page_start = 1):
         "yahoo"
     ).text
     result = BeautifulSoup(req_res, "html.parser")
-    res_title = result.find_all("a", class_="d-ib fz-20 lh-26 td-hu tc va-bot mxw-100p")
-    res_description = result.find_all("p", class_="fz-14 lh-22 mah-44 ov-h d-box fbox-ov fbox-lc2")
+    res_title = result.find_all("a", class_="d-ib fz-20 ls-024 lh-19 td-hu tc va-bot mxw-100p mt-8")
+    res_description = result.find_all("p", class_="fc-dustygray fz-14 lh-22 ls-02 mah-44 ov-h d-box fbox-ov fbox-lc2")
     res_url = res_title
     for title, url, description in zip(res_title, res_url, res_description):
         title_parse = title.get_text().split(" › ")[-1]

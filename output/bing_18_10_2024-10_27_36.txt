@@ -1,0 +1,60 @@
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: HTML encoding issues - "Â" character showing up instead of …
+Domain: stackoverflow.com
+URL: https://stackoverflow.com/questions/1461907/html-encoding-issues-%c3%82-character-showing-up-instead-of-nbsp
+Description: I've got a legacy app just starting to misbehave, for whatever reason I'm not sure. It generates a bunch of HTML that gets turned into PDF reports by ActivePDF. The process works like this: Pull an
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: encoding - "â€™" showing on page instead of - Stack Overflow
+Domain: stackoverflow.com
+URL: https://stackoverflow.com/questions/2477452/%C3%A2%E2%82%AC-showing-on-page-instead-of
+Description: Mar 19, 2010 · I am using ASP.NET 2.0 with a database. This is most likely where your problem lies. You need to verify with an independent database tool what the data looks like.
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: How to convert these strange characters? (Ã«, Ã, Ã¬, Ã¹, Ã)
+Domain: stackoverflow.com
+URL: https://stackoverflow.com/questions/5127744/how-to-convert-these-strange-characters-%C3%83-%C3%83-%C3%83%C2%AC-%C3%83%C2%B9-%C3%83
+Description: utf8_encode() and utf8_decode convert data from and to ISO-8859-1. In a modern web site setup where the database, the database connection, and the output page encoding are UTF-8, it will not be necessary to do those conversions any more.
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: Strange Characters in database text: Ã, Ã, ¢, â‚ - Stack Overflow
+Domain: stackoverflow.com
+URL: https://stackoverflow.com/questions/7861358/strange-characters-in-database-text-%C3%83-%C3%83-%C2%A2-%C3%A2-%E2%82%AC
+Description: Oct 22, 2011 · This is surely an encoding problem. You have a different encoding in your database and in your website and this fact is the cause of the problem.
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: html - a tag as a submit button? - Stack Overflow
+Domain: stackoverflow.com
+URL: https://stackoverflow.com/questions/7340300/a-tag-as-a-submit-button
+Description: Sep 7, 2011 · Now available on Stack Overflow for Teams! AI features where you work: search, IDE, and chat. Learn more Explore Teams
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: How to convert a string to an integer in JavaScript?
+Domain: stackoverflow.com
+URL: https://stackoverflow.com/questions/1133770/how-to-convert-a-string-to-an-integer-in-javascript
+Description: Try parseInt function: var number = parseInt("10"); But there is a problem. If you try to convert "010" using parseInt function, it detects as octal number, and will return number 8.
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: windows - How to run a PowerShell script - Stack Overflow
+Domain: stackoverflow.com
+URL: https://stackoverflow.com/questions/2035193/how-to-run-a-powershell-script
+Description: Prerequisites: You need to be able to run PowerShell as an administrator; You need to set your PowerShell execution policy to a permissive value or be able to bypass it
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: How can I get column names from a table in SQL Server?
+Domain: stackoverflow.com
+URL: https://stackoverflow.com/questions/1054984/how-can-i-get-column-names-from-a-table-in-sql-server
+Description: Jun 28, 2009 · --This is another variation used to document a large database for conversion (Edited to --remove static columns) SELECT o.Name as Table_Name , c.Name as Field_Name , t.Name as Data_Type , t.length as Length_Size , t.prec as Precision_ FROM syscolumns c INNER JOIN sysobjects o ON o.id = c.id LEFT JOIN systypes t on t.xtype = c.xtype WHERE …
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: How can I iterate over rows in a Pandas DataFrame?
+Domain: stackoverflow.com
+URL: https://stackoverflow.com/questions/16476924/how-can-i-iterate-over-rows-in-a-pandas-dataframe
+Description: How to iterate over rows in a DataFrame in Pandas Answer: DON'T *!. Iteration in Pandas is an anti-pattern and is something you should only do when you have exhausted every other option.
+=========================================
+Query search: a filetype:env | filetype:ini | filetype:config | filetype:env | filetype:passwd | filetype:htpasswd
+Title: github - How do I reverse a commit in git? - Stack Overflow
+Domain: stackoverflow.com
+URL: https://stackoverflow.com/questions/5381945/how-do-i-reverse-a-commit-in-git
+Description: I think you need to push a revert commit. So pull from github again, including the commit you want to revert, then use git revert and push the result.
